@@ -27,5 +27,6 @@ body {
   font-size: 1rem;
   line-height: 1.7;
   color: #777;
+  padding: 30px;
 }
 </style>
