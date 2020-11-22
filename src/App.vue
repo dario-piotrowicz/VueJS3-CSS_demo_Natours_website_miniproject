@@ -1,8 +1,16 @@
+<template>
+  <section-intro></section-intro>
+</template>
+
 <script>
 import "./assets/fonts/fonts.css";
+import SectionIntro from "./components/sections/Intro";
 
 export default {
   name: "App",
+  components: {
+    "section-intro": SectionIntro,
+  },
 };
 </script>
 
