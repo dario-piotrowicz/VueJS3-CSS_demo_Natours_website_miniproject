@@ -51,6 +51,7 @@
   font-size: 5rem;
   font-weight: 400;
   letter-spacing: 2rem;
+  animation: primary-heading-main-text-animation 1s ease-out;
 }
 
 .primary-heading .sub-text {
@@ -58,5 +59,34 @@
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 1.15rem;
+  animation: primary-heading-sub-text-animation 1s ease-out;
+}
+
+@keyframes primary-heading-main-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes primary-heading-sub-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>
