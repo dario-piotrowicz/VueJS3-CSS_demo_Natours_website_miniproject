@@ -8,7 +8,9 @@
         <span class="main-text">Outdoors</span>
         <span class="sub-text">is where life happens</span>
       </h1>
-      <animated-link-button href="#">Discover our tours</animated-link-button>
+      <animated-link-button href="#" class="animated-link-button"
+        >Discover our tours</animated-link-button
+      >
     </div>
   </section>
 </template>
@@ -73,6 +75,10 @@ export default {
   animation: primary-heading-sub-text-animation 1s ease-out;
 }
 
+.animated-link-button {
+  animation: animated-link-button-animation 0.5s ease-out 0.75s backwards;
+}
+
 @keyframes primary-heading-main-text-animation {
   0% {
     opacity: 0;
@@ -98,6 +104,17 @@ export default {
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes animated-link-button-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
