@@ -8,9 +8,19 @@
         <span class="main-text">Outdoors</span>
         <span class="sub-text">is where life happens</span>
       </h1>
+      <animated-link-button href="#">Discover our tours</animated-link-button>
     </div>
   </section>
 </template>
+
+<script>
+import AnimatedLinkButton from "../AnimatedLinkButton";
+export default {
+  components: {
+    "animated-link-button": AnimatedLinkButton,
+  },
+};
+</script>
 
 <style scoped>
 #intro {
@@ -38,12 +48,13 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .primary-heading {
   color: #fff;
   text-transform: uppercase;
-  text-align: center;
+  margin-bottom: 60px;
 }
 
 .primary-heading .main-text {
