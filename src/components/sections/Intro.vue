@@ -37,12 +37,12 @@ export default {
 
 .logo-container {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .content-wrapper {
@@ -56,22 +56,22 @@ export default {
 .primary-heading {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .primary-heading .main-text {
   display: block;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 2rem;
+  letter-spacing: 3.5rem;
   animation: primary-heading-main-text-animation 1s ease-out;
 }
 
 .primary-heading .sub-text {
   display: block;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 1.15rem;
+  letter-spacing: 1.5rem;
   animation: primary-heading-sub-text-animation 1s ease-out;
 }
 
@@ -82,10 +82,10 @@ export default {
 @keyframes primary-heading-main-text-animation {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -96,10 +96,10 @@ export default {
 @keyframes primary-heading-sub-text-animation {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   100% {
     opacity: 1;
@@ -110,7 +110,7 @@ export default {
 @keyframes animated-link-button-animation {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(4rem);
   }
   100% {
     opacity: 1;

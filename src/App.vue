@@ -21,12 +21,16 @@ export default {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
 }
 </style>

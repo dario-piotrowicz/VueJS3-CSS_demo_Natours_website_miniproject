@@ -13,23 +13,24 @@ export default {
 <style scoped>
 .btn:link,
 .btn:visited {
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: transform 0.1s, box-shadow 0.1s;
   position: relative;
 }
 
 .btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px #00000033;
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem #00000033;
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px #00000033;
+  transform: translateY(-0.1rem);
+  box-shadow: 0 .5rem 1rem #00000033;
 }
 
 .btn::after {
@@ -37,7 +38,7 @@ export default {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
