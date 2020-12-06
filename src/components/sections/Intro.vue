@@ -1,12 +1,12 @@
 <template>
-  <section id="intro">
-    <div class="logo-container">
-      <img src="../../assets/images/logo-white.png" alt="Logo" class="logo" />
+  <section class="intro">
+    <div class="intro__logo-container">
+      <img src="../../assets/images/logo-white.png" alt="Logo" class="intro__logo" />
     </div>
-    <div class="content-wrapper">
-      <h1 class="primary-heading">
-        <span class="main-text">Outdoors</span>
-        <span class="sub-text">is where life happens</span>
+    <div class="intro__content-wrapper">
+      <h1 class="intro__primary-heading">
+        <span class="intro__primary-main-text">Outdoors</span>
+        <span class="intro__primary-sub-text">is where life happens</span>
       </h1>
       <animated-link-button href="#" class="animated-link-button"
         >Discover our tours</animated-link-button
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-#intro {
+.intro {
   height: 95vh;
   position: relative;
   background-image: linear-gradient(to bottom right, #7ed56fc9, #28b485c9),
@@ -35,17 +35,17 @@ export default {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
 
-.logo-container {
+.intro__logo-container {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.intro__logo {
   height: 3.5rem;
 }
 
-.content-wrapper {
+.intro__content-wrapper {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -53,33 +53,33 @@ export default {
   text-align: center;
 }
 
-.primary-heading {
+.intro__primary-heading {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 6rem;
 }
 
-.primary-heading .main-text {
+.intro__primary-main-text {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-  animation: primary-heading-main-text-animation 1s ease-out;
+  animation: intro__primary-heading-main-text-animation 1s ease-out;
 }
 
-.primary-heading .sub-text {
+.intro__primary-sub-text {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.5rem;
-  animation: primary-heading-sub-text-animation 1s ease-out;
+  animation: intro__primary-heading-sub-text-animation 1s ease-out;
 }
 
 .animated-link-button {
-  animation: animated-link-button-animation 0.5s ease-out 0.75s backwards;
+  animation: intro__animated-link-button-animation 0.5s ease-out 0.75s backwards;
 }
 
-@keyframes primary-heading-main-text-animation {
+@keyframes intro__primary-heading-main-text-animation {
   0% {
     opacity: 0;
     transform: translateX(-10rem);
@@ -93,7 +93,7 @@ export default {
   }
 }
 
-@keyframes primary-heading-sub-text-animation {
+@keyframes intro__primary-heading-sub-text-animation {
   0% {
     opacity: 0;
     transform: translateX(10rem);
@@ -107,7 +107,7 @@ export default {
   }
 }
 
-@keyframes animated-link-button-animation {
+@keyframes intro__animated-link-button-animation {
   0% {
     opacity: 0;
     transform: translateY(4rem);

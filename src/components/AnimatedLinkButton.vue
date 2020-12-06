@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="btn btn-white"><slot></slot></a>
+  <a :href="href" class="btn btn--white"><slot></slot></a>
 </template>
 
 <script>
@@ -51,12 +51,12 @@ export default {
   opacity: 0;
 }
 
-.btn-white {
+.btn--white {
   color: #777;
   background-color: #fff;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 </style>
