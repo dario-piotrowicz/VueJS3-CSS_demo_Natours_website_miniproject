@@ -10,7 +10,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+@import 'src/assets/styles/constants/colors.scss';
+
 .btn:link,
 .btn:visited {
   font-size: 1.6rem;
@@ -25,12 +27,12 @@ export default {
 
 .btn:hover {
   transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem #00000033;
+  box-shadow: 0 1rem 2rem transparentize($color-black, 0.77);
 }
 
 .btn:active {
   transform: translateY(-0.1rem);
-  box-shadow: 0 .5rem 1rem #00000033;
+  box-shadow: 0 .5rem 1rem transparentize($color-black, 0.77);
 }
 
 .btn::after {
@@ -52,11 +54,11 @@ export default {
 }
 
 .btn--white {
-  color: #777;
-  background-color: #fff;
+  color: $color-medium-gray;
+  background-color: $color-white;
 }
 
 .btn--white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 </style>

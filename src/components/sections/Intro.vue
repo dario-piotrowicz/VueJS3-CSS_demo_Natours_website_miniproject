@@ -24,11 +24,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
+@import 'src/assets/styles/constants/colors.scss';
+
 .intro {
+  $bg-colors-transparent-amount: 0.15;
+  $bg-color-top-left : transparentize($color-primary-lighter, $bg-colors-transparent-amount);
+  $bg-color-bottom-right: transparentize($color-primary-darker, $bg-colors-transparent-amount);
+
   height: 95vh;
   position: relative;
-  background-image: linear-gradient(to bottom right, #7ed56fc9, #28b485c9),
+  background-image: linear-gradient(to bottom right, $bg-color-top-left, $bg-color-bottom-right),
     url("../../assets/images/intro-bg.jpg");
   background-size: cover;
   background-position: top;
@@ -54,7 +60,7 @@ export default {
 }
 
 .intro__primary-heading {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   margin-bottom: 6rem;
 }

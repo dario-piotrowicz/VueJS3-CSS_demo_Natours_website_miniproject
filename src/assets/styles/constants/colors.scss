@@ -1,0 +1,15 @@
+$color-medium-gray: #777;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-primary: #55c57a;
+$colors-primary-lighter-darker-amount: 11%;
+$color-primary-lighter: lighten(
+  $color-primary,
+  $colors-primary-lighter-darker-amount
+);
+$color-primary-darker: darken(
+  $color-primary,
+  $colors-primary-lighter-darker-amount
+);

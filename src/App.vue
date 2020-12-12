@@ -14,7 +14,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import './assets/styles/constants/colors.scss';
+
 *,
 *::before,
 *::after {
@@ -32,7 +34,7 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: $color-medium-gray;
   padding: 3rem;
   box-sizing: border-box;
 }
