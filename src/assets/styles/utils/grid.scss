@@ -27,35 +27,36 @@
       }
     }
 
+    @function col-width($span, $totals) {
+      $single-span-width: calc(
+        (100% - (#{$gutter-horizontal} * (#{$totals} - 1))) / #{$totals}
+      );
+      $total-width-without-gutters: calc(#{$single-span-width} * #{$span});
+      @if $span < 2 {
+        @return $total-width-without-gutters;
+      } @else {
+        $gutters-width: calc((#{$span} - 1) * #{$gutter-horizontal});
+        @return calc(#{$total-width-without-gutters} + #{$gutters-width});
+      }
+    }
+
     .col-1-of-2 {
-      width: calc((100% - #{$gutter-horizontal}) / 2);
+      width: col-width(1, 2);
     }
-
     .col-1-of-3 {
-      width: calc((100% - (#{$gutter-horizontal} * 2)) / 3);
+      width: col-width(1, 3);
     }
-
     .col-2-of-3 {
-      width: calc(
-        (((100% - (#{$gutter-horizontal} * 2)) / 3) * 2) + #{$gutter-horizontal}
-      );
+      width: col-width(2, 3);
     }
-
     .col-1-of-4 {
-      width: calc((100% - (#{$gutter-horizontal} * 3)) / 4);
+      width: col-width(1, 4);
     }
-
     .col-2-of-4 {
-      width: calc(
-        2 * ((100% - (#{$gutter-horizontal} * 3)) / 4) + #{$gutter-horizontal}
-      );
+      width: col-width(2, 4);
     }
-
     .col-3-of-4 {
-      width: calc(
-        3 * ((100% - (#{$gutter-horizontal} * 3)) / 4) +
-          (#{$gutter-horizontal}* 2)
-      );
+      width: col-width(3, 4);
     }
   }
 }
