@@ -15,7 +15,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/styles/constants/colors.scss';
+@import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/grid.scss';
 
 *,
 *::before,
