@@ -13,52 +13,56 @@ export default {
 <style lang='scss' scoped>
 @import 'src/assets/styles/constants/colors.scss';
 
-.btn:link,
-.btn:visited {
-  font-size: 1.6rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: transform 0.1s, box-shadow 0.1s;
-  position: relative;
-}
+.btn {
 
-.btn:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem transparentize($color-black, 0.77);
-}
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: transform 0.1s, box-shadow 0.1s;
+    position: relative;
+  }
 
-.btn:active {
-  transform: translateY(-0.1rem);
-  box-shadow: 0 .5rem 1rem transparentize($color-black, 0.77);
-}
+  &:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem transparentize($color-black, 0.77);
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: transform 0.4s, opacity 0.4s;
-}
+    &::after {
+      transform: scaleX(1.4) scaleY(1.7);
+      opacity: 0;
+    }
+  }
 
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.7);
-  opacity: 0;
-}
+  &:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 .5rem 1rem transparentize($color-black, 0.77);
+  }
 
-.btn--white {
-  color: $color-medium-gray;
-  background-color: $color-white;
-}
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.4s, opacity 0.4s;
+  }
 
-.btn--white::after {
-  background-color: $color-white;
+  &--white {
+    color: $color-medium-gray;
+    background-color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
 }
 </style>

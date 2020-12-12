@@ -27,15 +27,16 @@ export default {
 
 html {
   font-size: 62.5%;
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    color: $color-medium-gray;
+    padding: 3rem;
+    box-sizing: border-box;
+  }
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: $color-medium-gray;
-  padding: 3rem;
-  box-sizing: border-box;
-}
 </style>

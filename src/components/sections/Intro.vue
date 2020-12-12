@@ -39,47 +39,51 @@ export default {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+  &__logo-container {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__content-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__primary- {
+    &heading {
+      color: $color-white;
+      text-transform: uppercase;
+      margin-bottom: 6rem;
+    }
+
+    &main-text {
+      display: block;
+      font-size: 6rem;
+      font-weight: 400;
+      letter-spacing: 3.5rem;
+      animation: intro__primary-heading-main-text-animation 1s ease-out;
+    }
+
+    &sub-text {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.5rem;
+      animation: intro__primary-heading-sub-text-animation 1s ease-out;
+    }
+  }
+
 }
 
-.intro__logo-container {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-
-.intro__logo {
-  height: 3.5rem;
-}
-
-.intro__content-wrapper {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.intro__primary-heading {
-  color: $color-white;
-  text-transform: uppercase;
-  margin-bottom: 6rem;
-}
-
-.intro__primary-main-text {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation: intro__primary-heading-main-text-animation 1s ease-out;
-}
-
-.intro__primary-sub-text {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.5rem;
-  animation: intro__primary-heading-sub-text-animation 1s ease-out;
-}
 
 .animated-link-button {
   animation: intro__animated-link-button-animation 0.5s ease-out 0.75s backwards;
