@@ -28,7 +28,7 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .intro {
-  $bg-colors-transparent-amount: 0.15;
+  $bg-colors-transparent-amount: .3;
   $bg-color-top-left : transparentize($color-primary-lighter, $bg-colors-transparent-amount);
   $bg-color-bottom-right: transparentize($color-primary-darker, $bg-colors-transparent-amount);
 
