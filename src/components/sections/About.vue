@@ -3,6 +3,31 @@
         <div class="text-centering-container">
             <h2 class="about__heading">Exciting tours for adventurous people</h2>
         </div>
+        <div class="grid">
+            <div class="row">
+                <div class="col-1-of-2 about-text-content">
+                    <h3 class="about-text-content__heading">
+                        You're going to fall in love with nature
+                    </h3>
+                    <p class="about-text-content__paragraph">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Perspiciatis fugit quisquam voluptas fuga ab illo. Amet nostrum
+                        tempora voluptas. Iure consequatur, perspiciatis voluptatem
+                        possimus quis incidunt. Aperiam ea totam error?
+                    </p>
+                    <h3 class="about-text-content__heading">
+                        Live adventures like you never have before
+                    </h3>
+                    <p class="about-text-content__paragraph">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Officiis quae quas architecto, quibusdam dignissimos commodi.
+                    </p>
+                    <a href="#" class="btn-text">
+                        Learn more <span class="arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 </template>
 
@@ -30,6 +55,49 @@
         &:hover {
             transform: skewY(2deg) skewX(15deg) scale(1.05);
             text-shadow: 5px 10px 20px transparentize($color-black, 0.65);
+        }
+    }
+
+    &-text-content {
+        font-size: 1.6rem;
+
+        &__heading {
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 0.7rem;
+        }
+        &__paragraph:not(:last-child) {
+            margin-bottom: 3.8rem;
+        }
+
+        .btn-text {
+            &:link,
+            &:visited {
+                font-size: 1.6rem;
+                color: $color-primary;
+                display: inline-block;
+                text-decoration: none;
+                border-bottom: 1px solid $color-primary;
+                padding: 3px;
+                transition: transform .2s, box-shadow .2s, color .2s, background-color .2s;
+
+                .arrow {
+                    line-height: 1;
+                    font-size: 2.5rem;
+                }
+            }
+
+            &:hover {
+                color: $color-white;
+                background-color: $color-primary;
+                box-shadow: 0 10px 20px transparentize($color-black, 0.75);
+                transform: translateY(-2px);
+            }
+
+            &:active {
+                box-shadow: 0 5px 10px transparentize($color-black, 0.75);
+                transform: translateY(0);
+            }
         }
     }
 }
