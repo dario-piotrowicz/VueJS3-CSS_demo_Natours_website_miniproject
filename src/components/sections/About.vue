@@ -26,6 +26,11 @@
                         Learn more <span class="arrow">&rarr;</span>
                     </a>
                 </div>
+                <div class="col-1-of-2 about-images-composition">
+                    <img src="../../../src/assets/images/about/nat-1.jpg" alt="Nature Picture 1" class="about-images-composition__image about-images-composition__image--first">
+                    <img src="../../../src/assets/images/about/nat-2.jpg" alt="Nature Picture 2" class="about-images-composition__image about-images-composition__image--second">
+                    <img src="../../../src/assets/images/about/nat-3.jpg" alt="Nature Picture 3" class="about-images-composition__image about-images-composition__image--third">
+                </div>
             </div>
         </div>
     </section>
@@ -100,5 +105,46 @@
             }
         }
     }
+
+    &-images-composition {
+        position: relative;
+
+        &__image {
+            width: 55%;
+            box-shadow: 0 15px 40px transparentize($color-black, 0.6);
+            border-radius: 2px;
+            position: absolute;
+            z-index: 10;
+            transition: transform .2s, box-shadow .2s, outline .2s, outline-offset .3s;
+
+            &--first {
+                left: 0;
+                top: -2rem;
+            }
+
+            &--second {
+                right: 0;
+                top: 2rem;
+            }
+
+            &--third {
+                left: 20%;
+                top: 10rem;
+            }
+
+            &:hover {
+                transform: scale(1.1) translate(-5px);
+                box-shadow: 0 25px 50px transparentize($color-black, 0.73);
+                z-index: 20;
+                outline: 1.5rem solid $color-primary;
+                outline-offset: 2rem;
+            }
+        }
+
+        &:hover &__image:not(:hover){
+            transform: scale(.8);
+        }
+    }
+
 }
 </style>
