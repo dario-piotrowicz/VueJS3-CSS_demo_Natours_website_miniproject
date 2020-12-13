@@ -4,14 +4,7 @@ $color-white: #fff;
 $color-black: #000;
 
 $color-primary: #55c57a;
-$colors-primary-lighter-darker-amount: 11%;
-$color-primary-lighter: lighten(
-  $color-primary,
-  $colors-primary-lighter-darker-amount
-);
-$color-primary-darker: darken(
-  $color-primary,
-  $colors-primary-lighter-darker-amount
-);
+$color-primary-lighter: #81f05f;
+$color-primary-darker: rgb(23, 177, 143);
 
 $bg-color-neutral-light: #f7f7f7;
