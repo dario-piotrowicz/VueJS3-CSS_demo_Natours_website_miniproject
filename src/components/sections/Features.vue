@@ -53,6 +53,7 @@ export default {
 
 .features {
     padding: 20rem 0;
+    margin-top: -13rem;
 
     $bg-colors-transparent-amount: .3;
     $bg-color-top-left : transparentize($color-primary-lighter, $bg-colors-transparent-amount);
@@ -61,5 +62,11 @@ export default {
     position: relative;
     background-image: linear-gradient(to bottom right, $bg-color-top-left, $bg-color-bottom-right), url("../../assets/images/features-bg.jpg");
     background-size: cover;
+
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
 }
 </style>
