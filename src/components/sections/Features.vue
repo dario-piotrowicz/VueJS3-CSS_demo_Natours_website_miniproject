@@ -25,22 +25,22 @@ export default {
                 {
                     iconClass: "basic-world",
                     title: "Explore the world",
-                    text: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit, dolore?"
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident optio autem alias laboriosam exercitationem, voluptate vitae iure debitis. Et, atque!"
                 },
                 {
                     iconClass: "basic-compass",
                     title: "Meet nature",
-                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, sed?"
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non at consequatur dolorem mollitia eveniet, dolorum doloremque quidem necessitatibus nesciunt odit."
                 },
                 {
                     iconClass: "basic-map",
                     title: "Find your way",
-                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, quos."
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error odio reiciendis explicabo voluptas vel dignissimos neque tempore, eos libero id."
                 },
                 {
                     iconClass: "basic-heart",
                     title: "Live a healthier life",
-                    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, illo."
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente similique possimus quaerat? Praesentium eos, placeat rem ratione tenetur sapiente aliquam!"
                 }
             ]
         };
@@ -52,7 +52,7 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .features {
-    padding: 20rem 0;
+    padding: 25rem 0;
     margin-top: -13rem;
 
     $bg-colors-transparent-amount: .3;
