@@ -42,8 +42,8 @@
 
 .about {
     background-color: $bg-color-neutral-light;
-    padding: 25rem 0;
-    margin-top: -15rem;
+    padding: 35rem 0 40rem;
+    margin-top: -20rem;
 
     &__heading {
         display: inline-block;
