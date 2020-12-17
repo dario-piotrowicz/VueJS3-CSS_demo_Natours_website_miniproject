@@ -6,18 +6,28 @@
         <div class="grid">
             <div class="row">
                 <div class="col-1-of-3">
-                    Card 1
+                    <tour-card></tour-card>
                 </div>
                 <div class="col-1-of-3">
-                    Card 2
+                    <tour-card></tour-card>
                 </div>
                 <div class="col-1-of-3">
-                    Card 3
+                    <tour-card></tour-card>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import TourCard from '../TourCard';
+
+export default {
+    components: {
+        "tour-card": TourCard
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
