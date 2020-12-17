@@ -38,7 +38,6 @@
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
-@import 'src/assets/styles/utils/containers.scss';
 
 .about {
     background-color: $bg-color-neutral-light;

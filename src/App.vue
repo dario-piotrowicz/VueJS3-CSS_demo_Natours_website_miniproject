@@ -26,6 +26,7 @@ export default {
 <style lang="scss">
 @import 'src/assets/styles/constants/colors.scss';
 @import 'src/assets/styles/utils/grid.scss';
+@import 'src/assets/styles/utils/containers.scss';
 
 *,
 *::before,
