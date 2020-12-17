@@ -2,6 +2,7 @@
   <section-intro></section-intro>
   <section-about></section-about>
   <section-features></section-features>
+  <section-tours></section-tours>
 </template>
 
 <script>
@@ -9,13 +10,15 @@ import "./assets/fonts/fonts.css";
 import SectionIntro from "./components/sections/Intro";
 import SectionAbout from "./components/sections/About";
 import SectionFeatures from "./components/sections/Features";
+import SectionTours from "./components/sections/Tours";
 
 export default {
   name: "App",
   components: {
     "section-intro": SectionIntro,
     "section-about": SectionAbout,
-    "section-features": SectionFeatures
+    "section-features": SectionFeatures,
+    "section-tours": SectionTours
   },
 };
 </script>
