@@ -6,13 +6,31 @@
         <div class="grid">
             <div class="row">
                 <div class="col-1-of-3">
-                    <tour-card></tour-card>
+                    <tour-card color-scheme="orange"
+                               title="the sea explorer"
+                               num-of-days="3"
+                               num-of-people="30"
+                               num-of-guides="2"
+                               sleep-in="cozy hotels"
+                               difficulty="easy"></tour-card>
                 </div>
                 <div class="col-1-of-3">
-                    <tour-card></tour-card>
+                    <tour-card color-scheme="green"
+                               title="the forest hiker"
+                               num-of-days="7"
+                               num-of-people="40"
+                               num-of-guides="6"
+                               sleep-in="provided tents"
+                               difficulty="medium"></tour-card>
                 </div>
                 <div class="col-1-of-3">
-                    <tour-card></tour-card>
+                    <tour-card color-scheme="blue"
+                               title="the snow adventurer"
+                               num-of-days="5"
+                               num-of-people="15"
+                               num-of-guides="3"
+                               sleep-in="provided tents"
+                               difficulty="hard"></tour-card>
                 </div>
             </div>
         </div>
