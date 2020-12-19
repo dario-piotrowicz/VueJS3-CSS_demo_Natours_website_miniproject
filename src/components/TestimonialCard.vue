@@ -1,9 +1,6 @@
 <template>
     <div class="testimonial-card">
-        TESTIMONIAL 1
-    </div>
-    <div class="testimonial-card">
-        TESTIMONIAL 2
+        TESTIMONIAL CARD
     </div>
 </template>
 

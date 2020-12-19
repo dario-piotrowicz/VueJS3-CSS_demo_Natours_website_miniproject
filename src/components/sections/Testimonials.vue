@@ -4,6 +4,7 @@
             <h2 class="testimonials__heading">We make people genuinely happy</h2>
         </div>
         <testimonial-card></testimonial-card>
+        <testimonial-card></testimonial-card>
     </section>
 </template>
 
