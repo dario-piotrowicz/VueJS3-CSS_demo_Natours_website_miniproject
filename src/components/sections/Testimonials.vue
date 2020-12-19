@@ -3,8 +3,12 @@
         <div class="text-centering-container">
             <h2 class="testimonials__heading">We make people genuinely happy</h2>
         </div>
-        <testimonial-card title="I had the best week ever with my family" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quia voluptate est perspiciatis mollitia rerum doloremque quos dicta dolor quae vel delectus quas, animi quam praesentium blanditiis sed. Itaque quis illum quia reiciendis nam provident. Enim fugiat sit ex dolores?"> </testimonial-card>
-        <testimonial-card title="WOW! My life is completely different now" text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga recusandae ad inventore consequatur, fugiat molestiae facilis alias maiores! Ullam ea, numquam fuga libero! Enim, numquam. Similique corrupti vitae ratione. Sint cumque enim pariatur quis totam id."></testimonial-card>
+        <testimonial-card title="I had the best week ever with my family"
+                          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias quia voluptate est perspiciatis mollitia rerum doloremque quos dicta dolor quae vel delectus quas, animi quam praesentium blanditiis sed. Itaque quis illum quia reiciendis nam provident. Enim fugiat sit ex dolores?"
+                          :img-src="require('../../assets/images/profiles/mary_smith.jpg')"> </testimonial-card>
+        <testimonial-card title="WOW! My life is completely different now"
+                          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga recusandae ad inventore consequatur, fugiat molestiae facilis alias maiores! Ullam ea, numquam fuga libero! Enim, numquam. Similique corrupti vitae ratione. Sint cumque enim pariatur quis totam id."
+                          :img-src="require('../../assets/images/profiles/jack_wilson.jpg')"></testimonial-card>
     </section>
 </template>
 

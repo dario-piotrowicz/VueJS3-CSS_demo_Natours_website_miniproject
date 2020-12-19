@@ -1,6 +1,9 @@
 <template>
     <div class="testimonial-card">
         <figure class="testimonial-card__figure">
+            <img class="testimonial-card__image"
+                 :src="imgSrc"
+                 alt="person on a tour">
         </figure>
         <div class="testimonial-card__text-content">
             <h3 class="testimonial-card__heading">{{ title }}</h3>
@@ -17,6 +20,10 @@ export default {
             required: true
         },
         text: {
+            type: String,
+            required: true
+        },
+        imgSrc: {
             type: String,
             required: true
         }
@@ -43,11 +50,14 @@ export default {
         width: $side;
         height: $side;
         float: left;
-        background-color: red;
         $circle: circle(50% at 50% 50%);
         shape-outside: $circle;
         clip-path:  $circle;
         transform: translate(-3rem);
+    }
+
+    &__image {
+        height: 100%;
     }
 
     &__heading {
