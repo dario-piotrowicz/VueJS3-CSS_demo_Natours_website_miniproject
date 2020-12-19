@@ -2,7 +2,7 @@
     <div class="tour-card">
         <div class="tour-card__side tour-card__side--front">
             <div :class="`tour-card__picture tour-card__picture--${colorClassName}`"></div>
-            <h4 class="tour-card__heading">
+            <h4 v-if="title" class="tour-card__heading">
                 <span :class="`tour-card__title tour-card__title--${colorClassName}`"> {{ title }} </span>
             </h4>
             <div class="tour-card__details">
@@ -50,28 +50,40 @@ export default {
     props: {
         'color-scheme': {
             type: String,
+            required: true,
             validator: value => possibleColorSchemes.includes(value)
         },
-        'title': String,
+        'title': {
+            type: String,
+            default: ''
+        },
         'num-of-days': {
             type: Number,
+            required: true,
             validator: value => isValidNumber(value, 0, 10)
         },
         'num-of-people': {
             type: Number,
+            required: true,
             validator: value => isValidNumber(value, 0, 50)
         },
         'num-of-guides': {
             type: Number,
+            required: true,
             validator: value => isValidNumber(value, 0, 10)
         },
-        'sleep-in': String,
+        'sleep-in': {
+            type: String,
+            required: true
+        },
         'difficulty': {
             type: String,
+            required: true,
             validator: value => possibleDifficulties.includes(value)
         },
         price: {
             type: Number,
+            required: true,
             validator: value => isValidNumber(value, 0, 1500)
         }
     },
