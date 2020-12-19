@@ -138,9 +138,9 @@ export default {
         color: $color-white;
         position: absolute;
         top: 12rem;
-        right: 2rem;
+        right: 3rem;
         text-align: right;
-        width: 75%;
+        width: 65%;
 
         .tour-card__title {
             padding: 1rem 1.5rem;
