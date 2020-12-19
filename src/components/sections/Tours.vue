@@ -37,15 +37,20 @@
                 </div>
             </div>
         </div>
+        <div class="text-centering-container animated-link-button-container">
+            <animated-link-button href="#" color-scheme="green">Discover all tours</animated-link-button>
+        </div>
     </section>
 </template>
 
 <script>
 import TourCard from '../TourCard';
+import AnimatedLinkButton from '../AnimatedLinkButton';
 
 export default {
     components: {
-        "tour-card": TourCard
+        "tour-card": TourCard,
+        "animated-link-button": AnimatedLinkButton
     }
 }
 </script>
@@ -55,7 +60,7 @@ export default {
 
 .tours {
     background-color: $bg-color-neutral-light;
-    padding: 30rem 0 50rem 0;
+    padding: 30rem 0 15rem 0;
     margin-top: -15rem;
 
     &__heading {
@@ -74,6 +79,11 @@ export default {
             transform: skewY(2deg) skewX(15deg) scale(1.05);
             text-shadow: 5px 10px 20px transparentize($color-black, 0.65);
         }
+    }
+
+    .animated-link-button-container {
+        margin-top: 8rem;
+        padding: 3rem;
     }
 }
 </style>

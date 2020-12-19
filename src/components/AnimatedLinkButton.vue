@@ -1,11 +1,21 @@
 <template>
-  <a :href="href" class="btn btn--white"><slot></slot></a>
+  <a :href="href" :class="`btn btn--${colorScheme}`"><slot></slot></a>
 </template>
 
 <script>
+const possibleColorSchemes = [
+    'green',
+    'white'
+];
+
 export default {
   props: {
     href: String,
+    'color-scheme': {
+        type: String,
+        default: 'white',
+        validator: value => possibleColorSchemes.includes(value)
+    }
   },
 };
 </script>
@@ -25,6 +35,7 @@ export default {
     border-radius: 10rem;
     transition: transform 0.1s, box-shadow 0.1s;
     position: relative;
+    transform: translateY(0);
   }
 
   &:hover {
@@ -61,6 +72,15 @@ export default {
 
     &::after {
       background-color: $color-white;
+    }
+  }
+
+  &--green {
+    color: $color-white;
+    background-color: $color-primary;
+
+    &::after {
+      background-color: $color-primary;
     }
   }
 
