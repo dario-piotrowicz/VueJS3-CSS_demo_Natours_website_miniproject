@@ -11,8 +11,14 @@
 <script>
 export default {
     props: {
-        iconClass: String,
-        title: String
+        iconClass: {
+            type: String,
+            required: true
+        },
+        title: {
+            type: String,
+            required: true
+        },
     }
 }
 </script>
