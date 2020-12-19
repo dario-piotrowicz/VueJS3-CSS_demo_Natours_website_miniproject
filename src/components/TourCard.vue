@@ -22,15 +22,46 @@
 </template>
 
 <script>
+
+const possibleColorSchemes = [
+    'orange',
+    'green',
+    'blue'
+];
+
+const possibleDifficulties = [
+    'easy',
+    'medium',
+    'hard'
+];
+
+
+const isValidNumber = (value,min,max) => value > min && value < max;
+
 export default {
     props: {
-        'color-scheme': String,
+        'color-scheme': {
+            type: String,
+            validator: value => possibleColorSchemes.includes(value)
+        },
         'title': String,
-        'num-of-days': Number,
-        'num-of-people': Number,
-        'num-of-guides': Number,
+        'num-of-days': {
+            type: Number,
+            validator: value => isValidNumber(value, 0, 10)
+        },
+        'num-of-people': {
+            type: Number,
+            validator: value => isValidNumber(value, 0, 50)
+        },
+        'num-of-guides': {
+            type: Number,
+            validator: value => isValidNumber(value, 0, 10)
+        },
         'sleep-in': String,
-        'difficulty': String
+        'difficulty': {
+            type: String,
+            validator: value => possibleDifficulties.includes(value)
+        }
     },
     computed : {
         colorClassName: function(){
