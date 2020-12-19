@@ -44,6 +44,12 @@ export default {
     padding: 6rem;
     padding-left: 9rem;
     font-size: 1.6rem;
+    $skew-x-degrees: 12deg;
+    transform: skewX(-$skew-x-degrees);
+
+    & > * {
+        transform: skewX($skew-x-degrees);
+    }
 
     &__figure {
         $side: 15rem;
@@ -53,7 +59,7 @@ export default {
         $circle: circle(50% at 50% 50%);
         shape-outside: $circle;
         clip-path:  $circle;
-        transform: translate(-3rem);
+        transform: translate(-3rem) skewX($skew-x-degrees);
     }
 
     &__image {
