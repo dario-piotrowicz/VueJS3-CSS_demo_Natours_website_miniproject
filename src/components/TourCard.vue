@@ -16,12 +16,21 @@
             </div>
         </div>
         <div :class="`tour-card__side tour-card__side--back tour-card__side--back--${colorClassName}`">
-            <h1>BACK</h1>
+            <div class="tour-card__call-to-action">
+                <div class="tour-card__price-box">
+                    <p class="tour-card__price-only">Only</p>
+                    <p class="tour-card__price-value">${{ price }}</p>
+                </div>
+                <div class="tour-card__book-now-button-container">
+                <animated-link-button href="#">Book Now!</animated-link-button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
+import AnimatedLinkButton from './AnimatedLinkButton';
 
 const possibleColorSchemes = [
     'orange',
@@ -34,7 +43,6 @@ const possibleDifficulties = [
     'medium',
     'hard'
 ];
-
 
 const isValidNumber = (value,min,max) => value > min && value < max;
 
@@ -61,6 +69,10 @@ export default {
         'difficulty': {
             type: String,
             validator: value => possibleDifficulties.includes(value)
+        },
+        price: {
+            type: Number,
+            validator: value => isValidNumber(value, 0, 1500)
         }
     },
     computed : {
@@ -77,6 +89,9 @@ export default {
                 return '';
             }
         }
+    },
+    components: {
+        'animated-link-button': AnimatedLinkButton
     }
 }
 </script>
@@ -215,6 +230,29 @@ export default {
                 border-bottom: 1px solid $color-light-gray;
             }
         }
+    }
+
+    &__call-to-action {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    &__price-box {
+        color: $color-white;
+        margin-bottom: 8rem;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
 </style>

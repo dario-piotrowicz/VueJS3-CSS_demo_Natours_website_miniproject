@@ -12,7 +12,8 @@
                                :num-of-people="30"
                                :num-of-guides="2"
                                sleep-in="cozy hotels"
-                               difficulty="easy"></tour-card>
+                               difficulty="easy"
+                               :price="250"></tour-card>
                 </div>
                 <div class="col-1-of-3">
                     <tour-card color-scheme="green"
@@ -21,7 +22,8 @@
                                :num-of-people="40"
                                :num-of-guides="6"
                                sleep-in="provided tents"
-                               difficulty="medium"></tour-card>
+                               difficulty="medium"
+                               :price="470"></tour-card>
                 </div>
                 <div class="col-1-of-3">
                     <tour-card color-scheme="blue"
@@ -30,7 +32,8 @@
                                :num-of-people="15"
                                :num-of-guides="3"
                                sleep-in="provided tents"
-                               difficulty="hard"></tour-card>
+                               difficulty="hard"
+                               :price="899"></tour-card>
                 </div>
             </div>
         </div>
