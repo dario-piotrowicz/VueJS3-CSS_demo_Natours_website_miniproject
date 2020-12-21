@@ -30,6 +30,7 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 @import 'src/assets/styles/utils/grid.scss';
 @import 'src/assets/styles/utils/containers.scss';
+@import 'src/assets/styles/utils/text.scss';
 
 *,
 *::before,
