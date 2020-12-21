@@ -66,11 +66,19 @@ export default {
         clip-path:  $circle;
         transform: translate(-3rem) skewX($skew-x-degrees);
         position: relative;
+        overflow: hidden;
     }
 
     &__image {
         height: 100%;
-        transform: translateX(-4rem);
+        transform: translateX(-4rem) scale(1.4);
+        transition: transform .5s, filter .5s;
+        backface-visibility: hidden;
+    }
+
+    &:hover &__image {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(4px) brightness(80%);
     }
 
     &__image-caption {
