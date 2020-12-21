@@ -70,6 +70,7 @@ export default {
 
     &__image {
         height: 100%;
+        transform: translateX(-4rem);
     }
 
     &__image-caption {
