@@ -4,6 +4,7 @@
             <img class="testimonial-card__image"
                  :src="imgSrc"
                  alt="person on a tour">
+            <figcaption class="testimonial-card__image-caption">{{ imgCaption }}</figcaption>
         </figure>
         <div class="testimonial-card__text-content">
             <h3 class="testimonial-card__heading">{{ title }}</h3>
@@ -24,6 +25,10 @@ export default {
             required: true
         },
         imgSrc: {
+            type: String,
+            required: true
+        },
+        imgCaption: {
             type: String,
             required: true
         }
@@ -60,10 +65,29 @@ export default {
         shape-outside: $circle;
         clip-path:  $circle;
         transform: translate(-3rem) skewX($skew-x-degrees);
+        position: relative;
     }
 
     &__image {
         height: 100%;
+    }
+
+    &__image-caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        transition: transform .5s, opacity .5s;
+    }
+
+    &:hover &__image-caption {
+        transform: translate(-50%,-50%);
+        opacity: 1;
     }
 
     &__heading {
