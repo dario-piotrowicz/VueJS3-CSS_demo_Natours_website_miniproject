@@ -22,9 +22,7 @@
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                         Officiis quae quas architecto, quibusdam dignissimos commodi.
                     </p>
-                    <a href="#" class="btn-text">
-                        Learn more <span class="arrow">&rarr;</span>
-                    </a>
+                    <text-link-button href="#" text="Learn more"></text-link-button>
                 </div>
                 <div class="col-1-of-2 about-images-composition">
                     <img src="../../../src/assets/images/about/nat-1.jpg" alt="Nature Picture 1" class="about-images-composition__image about-images-composition__image--first">
@@ -35,6 +33,16 @@
         </div>
     </section>
 </template>
+
+<script>
+import TextLinkButton from '../TextLinkButton';
+
+export default {
+    components: {
+        "text-link-button": TextLinkButton
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
@@ -72,36 +80,6 @@
         }
         &__paragraph:not(:last-child) {
             margin-bottom: 3.8rem;
-        }
-
-        .btn-text {
-            &:link,
-            &:visited {
-                font-size: 1.6rem;
-                color: $color-primary;
-                display: inline-block;
-                text-decoration: none;
-                border-bottom: 1px solid $color-primary;
-                padding: 3px;
-                transition: transform .2s, box-shadow .2s, color .2s, background-color .2s;
-
-                .arrow {
-                    line-height: 1;
-                    font-size: 2.5rem;
-                }
-            }
-
-            &:hover {
-                color: $color-white;
-                background-color: $color-primary;
-                box-shadow: 0 10px 20px transparentize($color-black, 0.75);
-                transform: translateY(-2px);
-            }
-
-            &:active {
-                box-shadow: 0 5px 10px transparentize($color-black, 0.75);
-                transform: translateY(0);
-            }
         }
     }
 

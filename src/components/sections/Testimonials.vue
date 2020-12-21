@@ -10,18 +10,18 @@
                           text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga recusandae ad inventore consequatur, fugiat molestiae facilis alias maiores! Ullam ea, numquam fuga libero! Enim, numquam. Similique corrupti vitae ratione. Sint cumque enim pariatur quis totam id."
                           :img-src="require('../../assets/images/profiles/jack_wilson.jpg')"
                           img-caption="Jack Wilson"></testimonial-card>
-        <a href="#" class="btn-text">Read all <span class="arrow">&rarr;</span>
-        </a>
+        <text-link-button href="#" text="Read all"></text-link-button>
         </div>
     </section>
 </template>
 
 <script>
 import TestimonialCard from '../TestimonialCard';
-
+import TextLinkButton from '../TextLinkButton';
 export default {
     components: {
-        "testimonial-card": TestimonialCard
+        "testimonial-card": TestimonialCard,
+        "text-link-button": TextLinkButton
     }
 }
 </script>
@@ -48,36 +48,6 @@ export default {
         &:hover {
             transform: skewY(2deg) skewX(15deg) scale(1.05);
             text-shadow: 5px 10px 20px transparentize($color-black, 0.65);
-        }
-    }
-
-    .btn-text {
-        &:link,
-        &:visited {
-            font-size: 1.6rem;
-            color: $color-primary;
-            display: inline-block;
-            text-decoration: none;
-            border-bottom: 1px solid $color-primary;
-            padding: 3px;
-            transition: transform .2s, box-shadow .2s, color .2s, background-color .2s;
-
-            .arrow {
-                line-height: 1;
-                font-size: 2.5rem;
-            }
-        }
-
-        &:hover {
-            color: $color-white;
-            background-color: $color-primary;
-            box-shadow: 0 10px 20px transparentize($color-black, 0.75);
-            transform: translateY(-2px);
-        }
-
-        &:active {
-            box-shadow: 0 5px 10px transparentize($color-black, 0.75);
-            transform: translateY(0);
         }
     }
 }
