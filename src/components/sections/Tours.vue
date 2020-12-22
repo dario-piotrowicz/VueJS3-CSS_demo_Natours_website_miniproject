@@ -5,35 +5,16 @@
         </div>
         <div class="grid">
             <div class="row">
-                <div class="col-1-of-3">
-                    <tour-card color-scheme="orange"
-                               title="the sea explorer"
-                               :num-of-days="3"
-                               :num-of-people="30"
-                               :num-of-guides="2"
-                               sleep-in="cozy hotels"
-                               difficulty="easy"
-                               :price="250"></tour-card>
-                </div>
-                <div class="col-1-of-3">
-                    <tour-card color-scheme="green"
-                               title="the forest hiker"
-                               :num-of-days="7"
-                               :num-of-people="40"
-                               :num-of-guides="6"
-                               sleep-in="provided tents"
-                               difficulty="medium"
-                               :price="470"></tour-card>
-                </div>
-                <div class="col-1-of-3">
-                    <tour-card color-scheme="blue"
-                               title="the snow adventurer"
-                               :num-of-days="5"
-                               :num-of-people="15"
-                               :num-of-guides="3"
-                               sleep-in="provided tents"
-                               difficulty="hard"
-                               :price="899"></tour-card>
+                <div v-for="tour of tours" :key="tour.title" class="col-1-of-3">
+                    <tour-card :color-scheme="tour.colorScheme"
+                               :title="tour.title"
+                               :num-of-days="tour.numOfDays"
+                               :num-of-people="tour.numOfPeople"
+                               :num-of-guides="tour.numOfGuides"
+                               :sleep-in="tour.sleepIn"
+                               :difficulty="tour.difficulty"
+                               :price="tour.price">
+                    </tour-card>
                 </div>
             </div>
         </div>
@@ -51,6 +32,43 @@ export default {
     components: {
         "tour-card": TourCard,
         "animated-link-button": AnimatedLinkButton
+    },
+    data: function(){
+        return {
+            tours: [
+                    {
+                        colorScheme: "orange",
+                        title: "the sea explorer",
+                        numOfDays: 3,
+                        numOfPeople: 30,
+                        numOfGuides: 2,
+                        sleepIn: "cozy hotels",
+                        difficulty: "easy",
+                        price: 250
+                    },
+                    {
+                        colorScheme: "green",
+                        title: "the forest hiker",
+                        numOfDays: 7,
+                        numOfPeople: 40,
+                        numOfGuides: 6,
+                        sleepIn: "provided tents",
+                        difficulty: "medium",
+                        price: 470
+                    },
+                    {
+                        colorScheme: "blue",
+                        title: "the snow adventurer",
+                        numOfDays: 5,
+                        numOfPeople: 15,
+                        numOfGuides: 3,
+                        sleepIn: "provided tents",
+                        difficulty: "hard",
+                        price: 899
+                    }
+
+            ]
+        };
     }
 }
 </script>
