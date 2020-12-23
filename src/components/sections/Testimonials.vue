@@ -1,5 +1,11 @@
 <template>
     <section class="testimonials">
+        <div class="background-video">
+            <video class="background-video__content" autoplay muted loop>
+                <source src="../../assets/videos/testimonials-background.mp4" type="video/mp4">
+                <source src="../../assets/videos/testimonials-background.webm" type="video/webm">
+            </video>
+        </div>
         <div class="text-centering-container">
             <h2 class="section-heading">We make people genuinely happy</h2>
                 <testimonial-card v-for="card of testimonialCards"
@@ -49,7 +55,24 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .testimonials {
-    background-color: #ddd;
     padding: 5rem 0 15rem 0;
+    position: relative;
 }
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .15;
+
+    &__content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
 </style>
