@@ -44,7 +44,7 @@ export default {
     min-height: 27rem;
     margin: 8rem auto;
     box-shadow: 0 3rem 6rem transparentize($color-black, 0.8);
-    background-color: $color-white;
+    background-color: transparentize($color-white, .6);
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
