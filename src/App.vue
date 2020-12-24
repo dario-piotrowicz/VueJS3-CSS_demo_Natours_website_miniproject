@@ -4,6 +4,7 @@
   <section-features></section-features>
   <section-tours></section-tours>
   <section-testimonials></section-testimonials>
+  <section-booking></section-booking>
 </template>
 
 <script>
@@ -13,6 +14,7 @@ import SectionAbout from "./components/sections/About";
 import SectionFeatures from "./components/sections/Features";
 import SectionTours from "./components/sections/Tours";
 import SectionTestimonials from './components/sections/Testimonials';
+import SectionBooking from './components/sections/Booking';
 
 export default {
   name: "App",
@@ -21,7 +23,8 @@ export default {
     "section-about": SectionAbout,
     "section-features": SectionFeatures,
     "section-tours": SectionTours,
-    "section-testimonials": SectionTestimonials
+    "section-testimonials": SectionTestimonials,
+    "section-booking": SectionBooking
   },
 };
 </script>
