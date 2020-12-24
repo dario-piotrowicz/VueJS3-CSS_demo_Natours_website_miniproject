@@ -33,14 +33,14 @@ export default {
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
-    transition: transform 0.1s, box-shadow 0.1s;
+    transition: transform .1s, box-shadow .1s;
     position: relative;
     transform: translateY(0);
   }
 
   &:hover {
-    transform: translateY(-0.5rem);
-    box-shadow: 0 1rem 2rem transparentize($color-black, 0.77);
+    transform: translateY(-.5rem);
+    box-shadow: 0 1rem 2rem transparentize($color-black, .77);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.7);
@@ -49,8 +49,8 @@ export default {
   }
 
   &:active {
-    transform: translateY(-0.1rem);
-    box-shadow: 0 .5rem 1rem transparentize($color-black, 0.77);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem transparentize($color-black, .77);
   }
 
   &::after {
@@ -63,7 +63,7 @@ export default {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: transform 0.4s, opacity 0.4s;
+    transition: transform .4s, opacity .4s;
   }
 
   &--white {

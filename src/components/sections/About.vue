@@ -58,7 +58,7 @@ export default {
         &__heading {
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 0.7rem;
+            margin-bottom: .7rem;
         }
         &__paragraph:not(:last-child) {
             margin-bottom: 3.8rem;
@@ -70,7 +70,7 @@ export default {
 
         &__image {
             width: 55%;
-            box-shadow: 0 15px 40px transparentize($color-black, 0.6);
+            box-shadow: 0 15px 40px transparentize($color-black, .6);
             border-radius: 2px;
             position: absolute;
             z-index: 10;
@@ -93,7 +93,7 @@ export default {
 
             &:hover {
                 transform: scale(1.1) translate(-5px);
-                box-shadow: 0 25px 50px transparentize($color-black, 0.73);
+                box-shadow: 0 25px 50px transparentize($color-black, .73);
                 z-index: 20;
                 outline: 1.5rem solid $color-primary;
                 outline-offset: 2rem;

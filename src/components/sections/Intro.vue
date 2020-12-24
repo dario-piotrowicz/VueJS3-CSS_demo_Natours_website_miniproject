@@ -86,7 +86,7 @@ export default {
 
 
 .animated-link-button {
-  animation: intro__animated-link-button-animation 0.5s ease-out 0.75s backwards;
+  animation: intro__animated-link-button-animation .5s ease-out .75s backwards;
 }
 
 @keyframes intro__primary-heading-main-text-animation {

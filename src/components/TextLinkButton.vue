@@ -38,12 +38,12 @@ export default {
     &:hover {
         color: $color-white;
         background-color: $color-primary;
-        box-shadow: 0 10px 20px transparentize($color-black, 0.75);
+        box-shadow: 0 10px 20px transparentize($color-black, .75);
         transform: translateY(-2px);
     }
 
     &:active {
-        box-shadow: 0 5px 10px transparentize($color-black, 0.75);
+        box-shadow: 0 5px 10px transparentize($color-black, .75);
         transform: translateY(0);
     }
 }

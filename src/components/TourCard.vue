@@ -136,7 +136,7 @@ export default {
         transition: all 1s ease;
         border-radius: 3px;
         overflow: hidden;
-        box-shadow: 0 15px 40px transparentize($color-black, 0.85);;
+        box-shadow: 0 15px 40px transparentize($color-black, .85);;
 
         &--back {
             transform: rotateY(180deg);
@@ -205,8 +205,8 @@ export default {
             box-decoration-break: clone;
 
             @function title-background-image($color-light,$color-dark){
-                $color-light-transparent: transparentize($color-light, 0.15);
-                $color-dark-transparent: transparentize($color-dark, 0.15);
+                $color-light-transparent: transparentize($color-light, .15);
+                $color-dark-transparent: transparentize($color-dark, .15);
                 @return linear-gradient(to right bottom, $color-light-transparent, $color-dark-transparent);
             }
 

@@ -27,12 +27,12 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .feature-card {
-        background: transparentize($color-white, 0.2);
+        background: transparentize($color-white, .2);
         font-size: 1.5rem;
         padding: 2.5rem;
         text-align: center;
         border-radius: 3px;
-        box-shadow: 0 15px 40px transparentize($color-black, 0.77);;
+        box-shadow: 0 15px 40px transparentize($color-black, .77);;
         transition: transform .3s;
 
         &:hover {
