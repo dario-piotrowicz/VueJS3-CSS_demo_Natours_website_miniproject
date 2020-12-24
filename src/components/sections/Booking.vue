@@ -1,14 +1,20 @@
 <template>
     <section class="booking">
         <div class="booking__content">
-            <div class="booking-form">
+            <div class="booking__form-container">
+                <booking-form></booking-form>
             </div>
         </div>
     </section>
 </template>
 
 <script>
+import BookingForm from '../BookingForm';
+
 export default {
+    components: {
+        "booking-form": BookingForm
+    }
 }
 </script>
 
@@ -33,6 +39,11 @@ export default {
         background-size: cover;
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem transparentize($color-black, 0.6);
+    }
+
+    &__form-container {
+        width: 50%;
+        padding: 6rem;
     }
 }
 </style>
