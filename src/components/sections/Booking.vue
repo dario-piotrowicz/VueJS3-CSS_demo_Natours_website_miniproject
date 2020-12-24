@@ -20,8 +20,12 @@ export default {
     background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker);
 
     &__content {
-        background-color: white;
         height: 50rem;
+
+        background-image: url("../../assets/images/booking-bg.jpg");
+        background-size: cover;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem transparentize($color-black, 0.6);
     }
 }
 </style>
