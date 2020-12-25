@@ -7,17 +7,20 @@
             <form-radio-button label="Small tour group" name="tour-size"></form-radio-button>
             <form-radio-button label="Large tour group" name="tour-size"></form-radio-button>
         </div>
+        <animated-link-button color-scheme="green" :isButton="true">Next Step<span class="arrow">&rarr;</span></animated-link-button>
     </form>
 </template>
 
 <script>
 import FormTextInput from './FormTextInput';
 import FormRadioButton from './FormRadioButton';
+import AnimatedLinkButton from './AnimatedLinkButton';
 
 export default {
     components: {
         "form-text-input": FormTextInput,
-        "form-radio-button": FormRadioButton
+        "form-radio-button": FormRadioButton,
+        "animated-link-button": AnimatedLinkButton
     }
 }
 </script>
@@ -35,6 +38,13 @@ export default {
         width: 90%;
         display: flex;
         justify-content: space-evenly;
+        margin-bottom: 5rem;
+    }
+
+    .arrow {
+        line-height: 0;
+        font-size: 3.1rem;
     }
 }
+
 </style>

@@ -1,5 +1,6 @@
 <template>
-  <a :href="href" :class="`btn btn--${colorScheme}`"><slot></slot></a>
+  <button v-if="isButton" :class="`btn btn--${colorScheme}`"><slot></slot></button>
+  <a v-else href="href" :class="`btn btn--${colorScheme}`"><slot></slot></a>
 </template>
 
 <script>
@@ -15,6 +16,10 @@ export default {
         type: String,
         default: 'white',
         validator: value => possibleColorSchemes.includes(value)
+    },
+    isButton:{
+      type: Boolean,
+      default: false
     }
   },
 };
@@ -25,8 +30,7 @@ export default {
 
 .btn {
 
-  &:link,
-  &:visited {
+  & {
     font-size: 1.6rem;
     text-transform: uppercase;
     text-decoration: none;
@@ -36,6 +40,9 @@ export default {
     transition: transform .1s, box-shadow .1s;
     position: relative;
     transform: translateY(0);
+    cursor: pointer;
+    border: none;
+    outline: none;
   }
 
   &:hover {
@@ -48,7 +55,7 @@ export default {
     }
   }
 
-  &:active {
+  &:active, &:focus {
     transform: translateY(-.1rem);
     box-shadow: 0 .5rem 1rem transparentize($color-black, .77);
   }
