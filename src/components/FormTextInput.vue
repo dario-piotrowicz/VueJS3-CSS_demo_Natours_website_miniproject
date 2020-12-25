@@ -1,7 +1,7 @@
 <template>
-    <div class="form-control">
-        <input class="form-control__input" :type="type" :placeholder="placeholder" :id="formControlId" :required="isRequired" autocomplete="off">
-        <label class="form-control__label" :for="formControlId">{{ label }}</label>
+    <div class="form-text">
+        <input class="form-text__input" :type="type" :placeholder="placeholder" :id="formTextId" :required="isRequired" autocomplete="off">
+        <label class="form-text__label" :for="formTextId">{{ label }}</label>
     </div>
 </template>
 
@@ -42,11 +42,11 @@ export default {
     created: function(){
         const minLength = 5;
         const maxLength = 25;
-        this.defaultFormControlId = `form-control-id-${createId(minLength,maxLength)}`;
+        this.defaultFormTextId = `form-text-id-${createId(minLength,maxLength)}`;
     },
     computed: {
-        formControlId: function(){
-            return this.id || this.defaultFormControlId;
+        formTextId: function(){
+            return this.id || this.defaultFormTextId;
         }
     }
 }
@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
 
-.form-control {
+.form-text {
     &:not(:last-child){
         margin-bottom: 2rem;
     }
