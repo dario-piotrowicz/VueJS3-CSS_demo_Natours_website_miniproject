@@ -71,6 +71,7 @@ export default {
         border-radius: 2px;
         background-color: transparentize($color-white, 0.5);
         border-bottom: 3px solid transparent;
+        transition: box-shadow .3s, border-bottom .3s;
 
         &:focus {
             outline: none;
