@@ -86,5 +86,20 @@ export default {
             color: #a9a9a9;
         }
     }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: opacity .3s, visibility .3s, transform .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem) scaleY(2);
+    }
 }
 </style>
