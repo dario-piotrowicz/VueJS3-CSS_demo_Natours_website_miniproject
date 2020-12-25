@@ -3,8 +3,10 @@
         <h2 class="section-heading booking-form__heading">Start booking now!</h2>
         <form-text-input type="text" placeholder="Full Name" label="Full Name" id="name" :isRequired="true"></form-text-input>
         <form-text-input type="email" placeholder="Email Address" label="Email Address" id="email" :isRequired="true"></form-text-input>
-        <form-radio-button label="Small tour group" name="tour-size"></form-radio-button>
-        <form-radio-button label="Large tour group" name="tour-size"></form-radio-button>
+        <div class="booking-form__radio-buttons-container">
+            <form-radio-button label="Small tour group" name="tour-size"></form-radio-button>
+            <form-radio-button label="Large tour group" name="tour-size"></form-radio-button>
+        </div>
     </form>
 </template>
 
@@ -27,6 +29,12 @@ export default {
     &__heading {
         font-size: 2.5rem;
         margin-bottom: 5rem;
+    }
+
+    &__radio-buttons-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
     }
 }
 </style>

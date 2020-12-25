@@ -1,7 +1,10 @@
 <template>
-        <div class="form-radio">
+    <div class="form-radio">
         <input class="form-radio__input" type="radio" :id="formRadioId" :name="name">
-        <label class="form-radio__label" :for="formRadioId">{{ label }}</label>
+        <label class="form-radio__label" :for="formRadioId">
+            <span class="form-radio__radio-button"></span>
+            {{ label }}
+        </label>
     </div>
 </template>
 
@@ -36,13 +39,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/assets/styles/constants/colors.scss';
+
 .form-radio {
     &__input {
-        color: red;
+        display: none;
     }
 
     &__label {
-        color: blue;
+        cursor: pointer;
+        position: relative;
+        padding-left: 3.5rem;
     }
+
+    &__radio-button {
+        display: inline-block;
+        $size: 3rem;
+        height: $size;
+        width: $size;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        position: absolute;
+        top: -.5rem;
+        left: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: inline-block;
+            $size: 1.2rem;
+            height: $size;
+            width: $size;
+            background-color: $color-primary;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__input:checked + &__label > &__radio-button::after {
+        opacity: 1;
+    }
+
 }
 </style>>
