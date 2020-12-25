@@ -12,7 +12,16 @@ export default {
     props: {
         type: {
             type: String,
-            required: true
+            required: true,
+            validator: (value) => {
+                const allowedTypes = [
+                    "text",
+                    "email",
+                    "password",
+                    "number",
+                ];
+                return allowedTypes.includes(value);
+            }
         },
         placeholder: {
             type: String,
