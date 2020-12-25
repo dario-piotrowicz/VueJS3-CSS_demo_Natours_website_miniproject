@@ -8,18 +8,18 @@
         <span class="intro__primary-main-text">Outdoors</span>
         <span class="intro__primary-sub-text">is where life happens</span>
       </h1>
-      <animated-link-button href="#" class="animated-link-button"
-        >Discover our tours</animated-link-button
-      >
+      <animated-link-or-button href="#" class="animated-link-or-button">
+        Discover our tours
+      </animated-link-or-button>
     </div>
   </section>
 </template>
 
 <script>
-import AnimatedLinkButton from "../AnimatedLinkButton";
+import AnimatedLinkOrButton from "../AnimatedLinkOrButton";
 export default {
   components: {
-    "animated-link-button": AnimatedLinkButton,
+    "animated-link-or-button": AnimatedLinkOrButton,
   },
 };
 </script>

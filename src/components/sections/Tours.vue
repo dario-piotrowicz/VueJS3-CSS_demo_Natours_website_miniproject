@@ -18,20 +18,22 @@
                 </div>
             </div>
         </div>
-        <div class="text-centering-container animated-link-button-container">
-            <animated-link-button href="#" color-scheme="green">Discover all tours</animated-link-button>
+        <div class="text-centering-container animated-link-or-button-container">
+            <animated-link-or-button href="#" color-scheme="green">
+                Discover all tours
+            </animated-link-or-button>
         </div>
     </section>
 </template>
 
 <script>
 import TourCard from '../TourCard';
-import AnimatedLinkButton from '../AnimatedLinkButton';
+import AnimatedLinkOrButton from '../AnimatedLinkOrButton';
 
 export default {
     components: {
         "tour-card": TourCard,
-        "animated-link-button": AnimatedLinkButton
+        "animated-link-or-button": AnimatedLinkOrButton
     },
     data: function(){
         return {

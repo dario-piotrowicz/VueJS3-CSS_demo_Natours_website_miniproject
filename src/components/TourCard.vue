@@ -22,7 +22,7 @@
                     <p class="tour-card__price-value">${{ price }}</p>
                 </div>
                 <div class="tour-card__book-now-button-container">
-                <animated-link-button href="#">Book Now!</animated-link-button>
+                <animated-link-or-button href="#">Book Now!</animated-link-or-button>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import AnimatedLinkButton from './AnimatedLinkButton';
+import AnimatedLinkOrButton from './AnimatedLinkOrButton';
 
 const possibleColorSchemes = [
     'orange',
@@ -103,7 +103,7 @@ export default {
         }
     },
     components: {
-        'animated-link-button': AnimatedLinkButton
+        'animated-link-or-button': AnimatedLinkOrButton
     }
 }
 </script>

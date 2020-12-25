@@ -29,21 +29,18 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .btn {
-
-  & {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    display: inline-block;
-    border-radius: 10rem;
-    transition: transform .1s, box-shadow .1s;
-    position: relative;
-    transform: translateY(0);
-    cursor: pointer;
-    border: none;
-    outline: none;
-  }
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: transform .1s, box-shadow .1s;
+  position: relative;
+  transform: translateY(0);
+  cursor: pointer;
+  border: none;
+  outline: none;
 
   &:hover {
     transform: translateY(-.5rem);

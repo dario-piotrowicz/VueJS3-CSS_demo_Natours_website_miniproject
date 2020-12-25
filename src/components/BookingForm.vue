@@ -7,20 +7,20 @@
             <form-radio-button label="Small tour group" name="tour-size"></form-radio-button>
             <form-radio-button label="Large tour group" name="tour-size"></form-radio-button>
         </div>
-        <animated-link-button color-scheme="green" :isButton="true">Next Step<span class="arrow">&rarr;</span></animated-link-button>
+        <animated-link-or-button color-scheme="green" :isButton="true">Next Step<span class="arrow">&rarr;</span></animated-link-or-button>
     </form>
 </template>
 
 <script>
 import FormTextInput from './FormTextInput';
 import FormRadioButton from './FormRadioButton';
-import AnimatedLinkButton from './AnimatedLinkButton';
+import AnimatedLinkOrButton from './AnimatedLinkOrButton';
 
 export default {
     components: {
         "form-text-input": FormTextInput,
         "form-radio-button": FormRadioButton,
-        "animated-link-button": AnimatedLinkButton
+        "animated-link-or-button": AnimatedLinkOrButton
     }
 }
 </script>
