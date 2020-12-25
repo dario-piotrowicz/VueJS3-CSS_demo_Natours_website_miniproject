@@ -1,8 +1,8 @@
 <template>
     <form action="#" class="booking-form">
         <h2 class="section-heading booking-form__heading">Start booking now!</h2>
-        <form-control type="text" placeholder="Full Name" label="Full Name" id="name"></form-control>
-        <form-control type="email" placeholder="Email Address" label="Email Address" id="email"></form-control>
+        <form-control type="text" placeholder="Full Name" label="Full Name" id="name" :isRequired="true"></form-control>
+        <form-control type="email" placeholder="Email Address" label="Email Address" id="email" :isRequired="true"></form-control>
     </form>
 </template>
 

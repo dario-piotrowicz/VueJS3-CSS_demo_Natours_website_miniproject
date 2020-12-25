@@ -1,6 +1,6 @@
 <template>
     <div class="form-control">
-        <input class="form-control__input" :type="type" :placeholder="placeholder" :id="formControlId" required autocomplete="off">
+        <input class="form-control__input" :type="type" :placeholder="placeholder" :id="formControlId" :required="isRequired" autocomplete="off">
         <label class="form-control__label" :for="formControlId">{{ label }}</label>
     </div>
 </template>
@@ -33,6 +33,10 @@ export default {
         },
         id: {
             type: String
+        },
+        isRequired: {
+            type: Boolean,
+            default: false
         }
     },
     created: function(){
