@@ -4,7 +4,7 @@
         <form-text-input type="text" placeholder="Full Name" label="Full Name" id="name" :isRequired="true"></form-text-input>
         <form-text-input type="email" placeholder="Email Address" label="Email Address" id="email" :isRequired="true"></form-text-input>
         <div class="booking-form__radio-buttons-container">
-            <form-radio-button label="Small tour group" name="tour-size"></form-radio-button>
+            <form-radio-button label="Small tour group" name="tour-size" :checked="true"></form-radio-button>
             <form-radio-button label="Large tour group" name="tour-size"></form-radio-button>
         </div>
         <animated-link-or-button color-scheme="green" :isButton="true">Next Step<span class="arrow">&rarr;</span></animated-link-or-button>

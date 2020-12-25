@@ -1,6 +1,6 @@
 <template>
     <div class="form-radio">
-        <input class="form-radio__input" type="radio" :id="formRadioId" :name="name">
+        <input class="form-radio__input" type="radio" :id="formRadioId" :name="name" :checked="checked">
         <label class="form-radio__label" :for="formRadioId">
             <span class="form-radio__radio-button"></span>
             {{ label }}
@@ -23,6 +23,10 @@ export default {
         },
         id: {
             type: String
+        },
+        checked: {
+            type: Boolean,
+            default: false
         }
     },
     created: function(){
