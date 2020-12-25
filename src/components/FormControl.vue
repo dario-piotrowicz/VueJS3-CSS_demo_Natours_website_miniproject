@@ -1,6 +1,6 @@
 <template>
     <div class="form-control">
-        <input class="form-control__input" :type="type" :placeholder="placeholder" :id="formControlId" required>
+        <input class="form-control__input" :type="type" :placeholder="placeholder" :id="formControlId" required autocomplete="off">
         <label class="form-control__label" :for="formControlId">{{ label }}</label>
     </div>
 </template>
