@@ -26,7 +26,6 @@ export default {
     background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker);
 
     &__content {
-        height: 50rem;
 
         background-image: linear-gradient(
                 105deg,
