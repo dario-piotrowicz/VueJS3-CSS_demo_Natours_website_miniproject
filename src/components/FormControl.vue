@@ -49,4 +49,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'src/assets/styles/constants/colors.scss';
+
+.form-control {
+    &:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        display: block;
+        width: 90%;
+        color: inherit;
+        font-family: inherit;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border: none;
+        border-radius: 2px;
+        background-color: transparentize($color-white, 0.5);
+        border-bottom: 3px solid transparent;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem transparentize($color-black, 0.9);
+            border-bottom: 3px solid $color-primary;
+
+            &:invalid {
+                border-bottom: 3px solid #FA7131;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color: #a9a9a9;
+        }
+    }
+}
 </style>
