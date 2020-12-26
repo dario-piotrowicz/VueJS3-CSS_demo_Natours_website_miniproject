@@ -18,9 +18,9 @@
                 </div>
                 <div class="col-1-of-2">
                     <p class="footer__copyright">
-                        Webpage built by <a href="https://github.com/dario-piotrowicz" target="_blank" class="footer__link">Dario Piotrowicz</a> following
-                        <a href="https://www.udemy.com/user/jonasschmedtmann" target="_blank" class="footer__link">Jonas Schmedtmann</a>'s instructions presented in his udemy course
-                        <a href="https://www.udemy.com/course/advanced-css-and-sass" target="_blank" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
+                        Webpage built by <a href="https://github.com/dario-piotrowicz" target="_blank" class="footer__link footer__link--italic">Dario Piotrowicz</a> following
+                        <a href="https://www.udemy.com/user/jonasschmedtmann" target="_blank" class="footer__link footer__link--italic">Jonas Schmedtmann</a>'s instructions presented in his udemy course
+                        <a href="https://www.udemy.com/course/advanced-css-and-sass" target="_blank" class="footer__link footer__link--italic">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann.
                         You are 100% allowed to use this webpage for both personal and commercial use, but not to claim it as your own
                         design. A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
                     </p>
@@ -82,6 +82,11 @@
             background-color: $background-color;
             box-shadow: 0 1rem 2rem transparentize($color-black, .6);
             transform: rotate(5deg) scale(1.3);
+            font-style: inherit;
+        }
+
+        &--italic {
+            font-style: italic;
         }
     }
 
