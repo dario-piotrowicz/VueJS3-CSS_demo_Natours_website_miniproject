@@ -7,6 +7,7 @@
     <section-testimonials></section-testimonials>
     <section-booking></section-booking>
   </main>
+  <app-footer></app-footer>
 </template>
 
 <script>
@@ -17,6 +18,7 @@ import SectionFeatures from "./components/sections/Features";
 import SectionTours from "./components/sections/Tours";
 import SectionTestimonials from './components/sections/Testimonials';
 import SectionBooking from './components/sections/Booking';
+import Footer from './components/Footer';
 
 export default {
   name: "App",
@@ -26,7 +28,8 @@ export default {
     "section-features": SectionFeatures,
     "section-tours": SectionTours,
     "section-testimonials": SectionTestimonials,
-    "section-booking": SectionBooking
+    "section-booking": SectionBooking,
+    "app-footer": Footer
   },
 };
 </script>
