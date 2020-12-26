@@ -1,10 +1,12 @@
 <template>
-  <section-intro></section-intro>
-  <section-about></section-about>
-  <section-features></section-features>
-  <section-tours></section-tours>
-  <section-testimonials></section-testimonials>
-  <section-booking></section-booking>
+  <main>
+    <section-intro></section-intro>
+    <section-about></section-about>
+    <section-features></section-features>
+    <section-tours></section-tours>
+    <section-testimonials></section-testimonials>
+    <section-booking></section-booking>
+  </main>
 </template>
 
 <script>
