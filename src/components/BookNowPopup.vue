@@ -1,14 +1,36 @@
 <template>
-    <div class="book-now-popup">
-        <div class="book-now-popup__content-wrapper">
+    <div :class="`book-now-popup${ show ? ' book-now-popup--visible' : '' }`" @click="$emit('close')">
+        <div class="book-now-popup__content-wrapper" @click="$event.stopPropagation()">
+            <div class="book-now-popup__left-pane">
+            </div>
+            <div class="book-now-popup__right-pane">
+                <button @click="$emit('close')">&times;</button>
+            </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    props: {
+        show: {
+            type: Boolean,
+            required: true
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
 
 .book-now-popup {
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
     position: fixed;
     height: 100vh;
     width: 100%;
@@ -17,6 +39,9 @@
     background-color: transparentize($color-black, .8);
     backdrop-filter: blur(10px);
     z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
 
     &__content-wrapper {
         background-color: $color-white;

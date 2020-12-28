@@ -13,7 +13,8 @@
                                :num-of-guides="tour.numOfGuides"
                                :sleep-in="tour.sleepIn"
                                :difficulty="tour.difficulty"
-                               :price="tour.price">
+                               :price="tour.price"
+                               @book-now-click="bookNowPopupIsOpen = true">
                     </tour-card>
                 </div>
             </div>
@@ -24,7 +25,7 @@
             </animated-link-or-button>
         </div>
     </section>
-    <book-now-popup></book-now-popup>
+    <book-now-popup :show="bookNowPopupIsOpen" @close="bookNowPopupIsOpen = false"></book-now-popup>
 </template>
 
 <script>
@@ -72,7 +73,8 @@ export default {
                         price: 899
                     }
 
-            ]
+            ],
+            bookNowPopupIsOpen: false
         };
     }
 }

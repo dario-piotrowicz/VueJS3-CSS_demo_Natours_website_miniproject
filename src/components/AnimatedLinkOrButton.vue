@@ -1,5 +1,5 @@
 <template>
-  <button v-if="isButton" :class="`btn btn--${colorScheme}`"><slot></slot></button>
+  <button v-if="isButton" :class="`btn btn--${colorScheme}`" @click="$emit('click')"><slot></slot></button>
   <a v-else href="href" :class="`btn btn--${colorScheme}`"><slot></slot></a>
 </template>
 

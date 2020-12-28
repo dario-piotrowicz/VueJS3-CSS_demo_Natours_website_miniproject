@@ -22,7 +22,7 @@
                     <p class="tour-card__price-value">${{ price }}</p>
                 </div>
                 <div class="tour-card__book-now-button-container">
-                <animated-link-or-button href="#">Book Now!</animated-link-or-button>
+                <animated-link-or-button :isButton="true" @click="$emit('book-now-click')">Book Now!</animated-link-or-button>
                 </div>
             </div>
         </div>
