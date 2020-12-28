@@ -74,7 +74,7 @@
         border-radius: 50%;
         background: radial-gradient($color-primary-lighter, $color-primary-darker);
         z-index: 1000;
-        transition: transform .8s cubic-bezier(0.86, 0, 0.3, 1);
+        transition: transform .8s cubic-bezier(0,.72,.74,.92);
     }
 
     &__menu {
@@ -137,6 +137,7 @@
 
     &__checkbox:checked ~  &__background {
         transform: scale(80);
+        transition: transform .8s cubic-bezier(0.86, 0, 0.3, 1);
     }
 
     &__icon {
