@@ -24,16 +24,19 @@
             </animated-link-or-button>
         </div>
     </section>
+    <book-now-popup></book-now-popup>
 </template>
 
 <script>
 import TourCard from '../TourCard';
 import AnimatedLinkOrButton from '../AnimatedLinkOrButton';
+import BookNowPopup from '../BookNowPopup';
 
 export default {
     components: {
         "tour-card": TourCard,
-        "animated-link-or-button": AnimatedLinkOrButton
+        "animated-link-or-button": AnimatedLinkOrButton,
+        "book-now-popup": BookNowPopup
     },
     data: function(){
         return {
