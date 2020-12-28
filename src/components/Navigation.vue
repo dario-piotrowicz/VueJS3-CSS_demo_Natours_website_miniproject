@@ -2,7 +2,7 @@
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navigation-hidden-checkbox">
         <label for="navigation-hidden-checkbox" class="navigation__button">
-            MENU
+            <span class="navigation__icon"></span>
         </label>
         <div class="navigation__background"></div>
         <nav class="navigation__menu">
@@ -59,6 +59,8 @@
         border-radius: 50%;
         z-index: 1002;
         box-shadow: 0 1rem 3rem transparentize($color-black, 0.9);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -137,5 +139,58 @@
         transform: scale(80);
     }
 
+    &__icon {
+        margin-top: ( $button-size / 2 ) - .1rem;
+        position: relative;
+
+        &,
+        &::before,
+        &::after {
+            display: inline-block;
+            width: 3rem;
+            height: 2px;
+            background-color: #333;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            transition: top .2s, transform .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+        &::after {
+            top: .8rem;
+        }
+    }
+
+    &__button:hover &__icon {
+        &::before {
+            top: -1rem;
+        }
+        &::after {
+            top: 1rem;
+        }
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+
+        &::before,
+        &::after {
+            top: 0;
+        }
+
+        &::before {
+            transform: rotate(135deg);
+        }
+        &::after {
+            transform: rotate(-135deg)
+        }
+    }
 }
 </style>
