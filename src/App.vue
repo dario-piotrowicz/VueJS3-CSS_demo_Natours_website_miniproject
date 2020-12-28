@@ -1,4 +1,5 @@
 <template>
+  <app-navigation></app-navigation>
   <main>
     <section-intro></section-intro>
     <section-about></section-about>
@@ -12,6 +13,7 @@
 
 <script>
 import "./assets/fonts/fonts.css";
+import Navigation from "./components/Navigation";
 import SectionIntro from "./components/sections/Intro";
 import SectionAbout from "./components/sections/About";
 import SectionFeatures from "./components/sections/Features";
@@ -23,13 +25,14 @@ import Footer from './components/Footer';
 export default {
   name: "App",
   components: {
+    "app-navigation": Navigation,
     "section-intro": SectionIntro,
     "section-about": SectionAbout,
     "section-features": SectionFeatures,
     "section-tours": SectionTours,
     "section-testimonials": SectionTestimonials,
     "section-booking": SectionBooking,
-    "app-footer": Footer
+    "app-footer": Footer,
   },
 };
 </script>
