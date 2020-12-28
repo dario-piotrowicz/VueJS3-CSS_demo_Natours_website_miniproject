@@ -44,6 +44,10 @@
     $button-size: 7rem;
     $button-displacement: 6rem;
 
+    &__checkbox {
+        display: none;
+    }
+
     &__button {
         display: block;
         width: $button-size;
@@ -54,6 +58,7 @@
         background-color: $color-white;
         border-radius: 50%;
         z-index: 1002;
+        box-shadow: 0 1rem 3rem transparentize($color-black, 0.9);
     }
 
     &__background {
@@ -67,16 +72,18 @@
         border-radius: 50%;
         background: radial-gradient($color-primary-lighter, $color-primary-darker);
         z-index: 1000;
-        transform: scale(80);
-}
+        transition: transform .8s cubic-bezier(0.86, 0, 0.3, 1);
+    }
 
     &__menu {
         height: 100vh;
-        width: 100%;
+        width: 0;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1001;
+        opacity: 0;
+        transition: width 0.1s 1s, opacity .8s;
     }
 
     &__list {
@@ -119,6 +126,16 @@
             transform: translateX(1rem);
         }
     }
+
+    &__checkbox:checked ~ &__menu {
+        width: 100%;
+        opacity: 1;
+        transition: width 0.1s 0.1s, opacity .8s 0.2s;
+    }
+
+    &__checkbox:checked ~  &__background {
+        transform: scale(80);
+}
 
 }
 </style>
