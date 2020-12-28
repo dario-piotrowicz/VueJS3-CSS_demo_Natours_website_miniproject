@@ -11,8 +11,9 @@
                 <h3 class="book-now-popup__heading-secondary">Book now your fanstastic tour</h3>
                 <p class="book-now-popup__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, qui corrupti quisquam repellat molestias natus asperiores suscipit,
-                    ab dolor deserunt, iusto consequatur voluptatem placeat dolores ullam consectetur quis. Porro esse nisi quibusdam.
-                    Dolore necessitatibus, ipsa sit rerum ipsum vitae, dolor, nihil rem cum fuga molestiae explicabo adipisci accusantium cumque a.
+                    ab dolor deserunt, iusto consequatur placeat dolores ullam consectetur quis. Porro esse nisi quibusdam.
+                    Dolore necessitatibus, ipsa sit, nihil rem cum fuga molestiae explicabo adipisci cumque a.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae dolorem omnis commodi minus quisquam explicabo, repellat optio quo magnam rerum.
                 </p>
                 <animated-link-or-button :isButton="true" @click="$emit('close')" color-scheme="green">
                     Book now
@@ -130,6 +131,8 @@ export default {
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
+        column-count: 2;
+        column-gap: 4rem;
     }
 
 }
