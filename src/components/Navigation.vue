@@ -135,7 +135,7 @@
 
     &__checkbox:checked ~  &__background {
         transform: scale(80);
-}
+    }
 
 }
 </style>
