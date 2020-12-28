@@ -83,7 +83,7 @@ export default {
     padding: 30rem 0 15rem 0;
     margin-top: -15rem;
 
-    .animated-link-button-container {
+    .animated-link-or-button-container {
         margin-top: 8rem;
         padding: 3rem;
     }
