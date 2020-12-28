@@ -43,7 +43,7 @@
         right: $button-displacement;
         background-color: $color-white;
         border-radius: 50%;
-        z-index: 1001;
+        z-index: 1002;
     }
 
     &__background {
@@ -57,6 +57,37 @@
         border-radius: 50%;
         background: radial-gradient($color-primary-lighter, $color-primary-darker);
         z-index: 1000;
+        transform: scale(80);
+}
+
+    &__menu {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001;
+    }
+
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+
+        &-item {
+            margin: 1rem;
+        }
+    }
+
+    &__link {
+        font-size: 3rem;
+        font-weight: 300;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-white;
     }
 
 }
