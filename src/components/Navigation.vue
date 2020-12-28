@@ -28,6 +28,22 @@
 </template>
 
 <style lang="scss" scoped>
+@import 'src/assets/styles/constants/colors.scss';
+
 .navigation {
+
+    &__background {
+        $size: 6rem;
+        $displacement: 6.5rem;
+        position: fixed;
+        top: $displacement;
+        right: $displacement;
+        height: $size;
+        width: $size;
+        border-radius: 50%;
+        background: radial-gradient($color-primary-lighter, $color-primary-darker);
+        z-index: 1000;
+    }
+
 }
 </style>
