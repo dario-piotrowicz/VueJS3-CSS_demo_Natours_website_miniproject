@@ -58,7 +58,7 @@
         background-color: $color-white;
         border-radius: 50%;
         z-index: 1002;
-        box-shadow: 0 1rem 3rem transparentize($color-black, 0.9);
+        box-shadow: 0 1rem 3rem transparentize($color-black, .7);
         text-align: center;
         cursor: pointer;
     }
