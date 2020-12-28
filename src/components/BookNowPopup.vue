@@ -25,23 +25,25 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .book-now-popup {
-
-    &--visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
     position: fixed;
     height: 100vh;
     width: 100%;
     top: 0;
     left: 0;
-    background-color: transparentize($color-black, .8);
-    backdrop-filter: blur(10px);
+    background-color: transparentize($color-black, .7);
+    backdrop-filter: blur(0);
     z-index: 9999;
 
     opacity: 0;
     visibility: hidden;
+
+    transition: opacity .5s, backdrop-filter 1s;
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+        backdrop-filter: blur(10px);
+    }
 
     &__content-wrapper {
         background-color: $color-white;
@@ -50,9 +52,17 @@ export default {
         height: 70%;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
         border-radius: 5px;
         overflow: hidden;
+        transition: opacity .4s .2s, transform .4s .2s;
     }
+
+    &--visible &__content-wrapper {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
 }
 </style>
