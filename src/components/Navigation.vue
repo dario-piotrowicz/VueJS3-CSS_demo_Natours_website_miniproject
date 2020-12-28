@@ -83,11 +83,26 @@
     }
 
     &__link {
-        font-size: 3rem;
-        font-weight: 300;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: $color-white;
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color-white;
+            padding: 1rem 2rem;
+            background-size: 230%;
+            background-image: linear-gradient(120deg, transparent 0%, transparent 49.9%, $color-white 50%);
+            transition: background-position .4s, color .4s, transform .4s;
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary;
+            transform: translateX(1rem);
+        }
     }
 
 }
