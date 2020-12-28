@@ -31,10 +31,24 @@
 @import 'src/assets/styles/constants/colors.scss';
 
 .navigation {
+    $button-size: 7rem;
+    $button-displacement: 6rem;
+
+    &__button {
+        display: block;
+        width: $button-size;
+        height: $button-size;
+        position: fixed;
+        top: $button-displacement;
+        right: $button-displacement;
+        background-color: $color-white;
+        border-radius: 50%;
+        z-index: 1001;
+    }
 
     &__background {
-        $size: 6rem;
-        $displacement: 6.5rem;
+        $size: $button-size - 1rem;
+        $displacement: $button-displacement + .5rem;
         position: fixed;
         top: $displacement;
         right: $displacement;
