@@ -8,19 +8,29 @@
         <nav class="navigation__menu">
             <ul class="navigation__list">
                 <li class="navigation__list-item">
-                    <a href="#" class="navigation__link">About Natours</a>
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__list-item-enumeration">01</span> About Natours
+                    </a>
                 </li>
                 <li class="navigation__list-item">
-                        <a href="#" class="navigation__link">Your benefits</a>
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__list-item-enumeration">02</span> Your benefits
+                    </a>
                 </li>
                 <li class="navigation__list-item">
-                        <a href="#" class="navigation__link">Popular tours</a>
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__list-item-enumeration">03</span> Popular tours
+                    </a>
                 </li>
                 <li class="navigation__list-item">
-                        <a href="#" class="navigation__link">Stories</a>
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__list-item-enumeration">04</span> Stories
+                    </a>
                 </li>
                 <li class="navigation__list-item">
-                        <a href="#" class="navigation__link">Book now</a>
+                    <a href="#" class="navigation__link">
+                        <span class="navigation__list-item-enumeration">05</span> Book now
+                    </a>
                 </li>
             </ul>
         </nav>
@@ -79,6 +89,11 @@
 
         &-item {
             margin: 1rem;
+
+            &-enumeration {
+                display: inline-block;
+                margin-right: 1.5rem;
+            }
         }
     }
 
