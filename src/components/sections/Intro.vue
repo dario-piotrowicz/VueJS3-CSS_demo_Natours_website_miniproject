@@ -26,6 +26,7 @@ export default {
 
 <style lang='scss' scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .intro {
   $bg-colors-transparent-amount: .3;
@@ -71,6 +72,11 @@ export default {
       font-weight: 400;
       letter-spacing: 3.5rem;
       animation: intro__primary-heading-main-text-animation 1s ease-out;
+
+      @include natours-mq(phone) {
+        letter-spacing: 1rem;
+        font-size: 5rem;
+      }
     }
 
     &sub-text {
@@ -79,6 +85,10 @@ export default {
       font-weight: 700;
       letter-spacing: 1.5rem;
       animation: intro__primary-heading-sub-text-animation 1s ease-out;
+
+      @include natours-mq(phone) {
+        letter-spacing: .5rem;
+      }
     }
   }
 
