@@ -42,6 +42,7 @@ export default {
 @import 'src/assets/styles/utils/grid.scss';
 @import 'src/assets/styles/utils/containers.scss';
 @import 'src/assets/styles/utils/text.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 *,
 *::before,
@@ -53,6 +54,19 @@ export default {
 
 html {
   font-size: 62.5%;
+
+  @include natours-mq(big-desktop) {
+    font-size: 75%;
+  }
+  @include natours-mq(tablet-landscape) {
+    font-size: 56.25%;
+  }
+  @include natours-mq(tablet-portrait) {
+    font-size: 50%;
+  }
+  @include natours-mq(phone) {
+    font-size: 45%;
+  }
 
   body {
     font-family: "Lato", sans-serif;
