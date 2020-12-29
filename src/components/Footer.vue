@@ -32,6 +32,7 @@
 
 <style lang="scss" scoped>
 @import '/src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .footer {
     $background-color: #333;
@@ -41,6 +42,9 @@
     font-size: 1.4rem;
     color: $text-color;
 
+    @include natours-mq(tablet-portrait) {
+        padding: 8rem;
+    }
 
     &__logo {
         &-container {
@@ -54,6 +58,11 @@
         border-top: 1px solid transparentize($text-color,.5);
         padding-top: 2rem;
         display: inline-block;
+
+        @include natours-mq(tablet-portrait) {
+            width: 100%;
+            text-align: center;
+        }
 
         &-list{
             list-style: none;
@@ -95,6 +104,12 @@
         padding-top: 2rem;
         width: 80%;
         float: right;
+
+        @include natours-mq(tablet-portrait) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 
 }
