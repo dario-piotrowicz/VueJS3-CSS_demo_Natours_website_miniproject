@@ -39,10 +39,13 @@
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .navigation {
     $button-size: 7rem;
     $button-displacement: 6rem;
+    $button-small-displacement: 3rem;
+    $button-very-small-displacement: 2rem;
 
     &__checkbox {
         display: none;
@@ -61,6 +64,15 @@
         box-shadow: 0 1rem 3rem transparentize($color-black, .7);
         text-align: center;
         cursor: pointer;
+
+        @include natours-mq(tablet-portrait) {
+            top: $button-small-displacement;
+            right: $button-small-displacement;
+        }
+        @include natours-mq(phone) {
+            top: $button-very-small-displacement;
+            right: $button-very-small-displacement;
+        }
     }
 
     &__background {
@@ -75,6 +87,15 @@
         background: radial-gradient($color-primary-lighter, $color-primary-darker);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0,.72,.74,.92);
+
+        @include natours-mq(tablet-portrait) {
+            top: $button-small-displacement  + .5rem;
+            right: $button-small-displacement  + .5rem;
+        }
+        @include natours-mq(phone) {
+            top: $button-very-small-displacement  + .5rem;
+            right: $button-very-small-displacement  + .5rem;
+        }
     }
 
     &__menu {
