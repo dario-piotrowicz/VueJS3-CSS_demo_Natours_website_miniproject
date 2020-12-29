@@ -76,6 +76,10 @@ html {
     color: $color-medium-gray;
     padding: 3rem;
     box-sizing: border-box;
+
+    @include natours-mq(tablet-portrait) {
+      padding: 0;
+    }
   }
 }
 
