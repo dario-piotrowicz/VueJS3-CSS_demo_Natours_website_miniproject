@@ -1,5 +1,8 @@
+@import "src/assets/styles/utils/media-queries.scss";
+
 .grid {
   $grid-max-width: 140rem;
+  $grid-smaller-max-width: 50rem;
   $gutter-vertical: 8rem;
   $gutter-horizontal: 6rem;
 
@@ -9,6 +12,10 @@
 
     &:not(:last-child) {
       margin-bottom: $gutter-vertical;
+    }
+
+    @include natours-mq(tablet-portrait) {
+      max-width: $grid-smaller-max-width;
     }
 
     &::after {
@@ -55,6 +62,16 @@
     }
     .col-3-of-4 {
       width: col-width(3, 4);
+    }
+
+    @include natours-mq(tablet-portrait) {
+      [class^="col-"] {
+        width: 100%;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: $gutter-horizontal;
+        }
+      }
     }
   }
 }
