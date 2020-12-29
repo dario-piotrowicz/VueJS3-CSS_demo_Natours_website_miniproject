@@ -41,6 +41,13 @@ export default {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
+  @include natours-mq(tablet-portrait) {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+  @include natours-mq(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
   &__logo-container {
     position: absolute;
     top: 4rem;
