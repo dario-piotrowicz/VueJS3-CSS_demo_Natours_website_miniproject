@@ -1,7 +1,10 @@
 <template>
     <footer class="footer">
         <div class="footer__logo-container">
-            <img :srcset="`${require('../assets/images/logo_low-res.png')} 1x , ${require('../assets/images/logo.png')} 2x`" alt="Full Logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source :srcset="`${require('../assets/images/logo-small_low-res.png')} 1x , ${require('../assets/images/logo-small.png')} 2x`" media="(max-width: 600px)">
+                <img :srcset="`${require('../assets/images/logo_low-res.png')} 1x , ${require('../assets/images/logo.png')} 2x`" alt="Full Logo">
+            </picture>
         </div>
         <div class="grid">
             <div class="row">
