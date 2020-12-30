@@ -7,7 +7,7 @@
             </video>
         </div>
         <div class="text-centering-container">
-            <h2 class="section-heading">We make people genuinely happy</h2>
+            <h2 class="section-heading testimonials__heading">We make people genuinely happy</h2>
                 <testimonial-card v-for="card of testimonialCards"
                                   :key="card.id"
                                   :title="card.title"
@@ -61,6 +61,10 @@ export default {
 
     @include natours-mq(tablet-landscape) {
         padding: 10rem 5rem;
+
+        &__heading {
+            margin-bottom: 0;
+        }
     }
 }
 
