@@ -102,8 +102,8 @@ export default {
 }
 
 
-.animated-link-button {
-  animation: intro__animated-link-button-animation .5s ease-out .75s backwards;
+.animated-link-or-button {
+  animation: intro__animated-link-or-button-animation .5s ease-out .75s backwards;
 }
 
 @keyframes intro__primary-heading-main-text-animation {
@@ -134,7 +134,7 @@ export default {
   }
 }
 
-@keyframes intro__animated-link-button-animation {
+@keyframes intro__animated-link-or-button-animation {
   0% {
     opacity: 0;
     transform: translateY(4rem);
