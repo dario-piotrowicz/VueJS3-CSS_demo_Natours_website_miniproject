@@ -46,11 +46,19 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .about {
     background-color: $bg-color-neutral-light;
-    padding: 35rem 0 40rem;
+    padding: 35rem 5rem 40rem;
     margin-top: -20rem;
+
+    @include natours-mq(tablet-portrait) {
+        padding: 23rem 5rem 50rem;
+    }
+    @include natours-mq(phone) {
+        padding-bottom: 48rem;
+    }
 
     &-text-content {
         font-size: 1.6rem;

@@ -82,11 +82,19 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .tours {
     background-color: $bg-color-neutral-light;
-    padding: 30rem 0 15rem 0;
+    padding: 30rem 5rem 10rem;
     margin-top: -15rem;
+
+    @include natours-mq(tablet-landscape) {
+        padding: 25rem 5rem 8rem;
+    }
+    @include natours-mq(tablet-portrait) {
+        padding-bottom: 7rem;
+    }
 
     .animated-link-or-button-container {
         margin-top: 8rem;

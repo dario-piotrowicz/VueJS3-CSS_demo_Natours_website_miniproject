@@ -53,10 +53,15 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .testimonials {
-    padding: 5rem 0 15rem 0;
+    padding: 15rem 5rem;
     position: relative;
+
+    @include natours-mq(tablet-landscape) {
+        padding: 10rem 5rem;
+    }
 }
 
 .background-video {

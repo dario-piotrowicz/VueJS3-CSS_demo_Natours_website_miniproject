@@ -20,13 +20,20 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .booking {
     padding: 15rem;
     background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker);
 
-    &__content {
+    @include natours-mq(tablet-landscape) {
+        padding: 13rem;
+    }
+    @include natours-mq(tablet-portrait) {
+        padding: 10rem;
+    }
 
+    &__content {
         background-image: linear-gradient(
                 105deg,
                 transparentize($color-white, 0.18) 0%,

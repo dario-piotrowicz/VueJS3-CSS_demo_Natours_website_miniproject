@@ -50,10 +50,18 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .features {
-    padding: 25rem 0;
+    padding: 25rem 5rem;
     margin-top: -13rem;
+
+    @include natours-mq(tablet-landscape) {
+        padding: 19rem 5rem;
+    }
+    @include natours-mq(tablet-portrait) {
+        padding: 15rem 5rem;
+    }
 
     $bg-colors-transparent-amount: .3;
     $bg-color-top-left : transparentize($color-primary-lighter, $bg-colors-transparent-amount);
