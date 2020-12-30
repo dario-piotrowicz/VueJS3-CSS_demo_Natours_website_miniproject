@@ -25,9 +25,21 @@
                     <text-link-button href="#" text="Learn more"></text-link-button>
                 </div>
                 <div class="col-1-of-2 about-images-composition">
-                    <img src="../../../src/assets/images/about/nat-1.jpg" alt="Nature Picture 1" class="about-images-composition__image about-images-composition__image--first">
-                    <img src="../../../src/assets/images/about/nat-2.jpg" alt="Nature Picture 2" class="about-images-composition__image about-images-composition__image--second">
-                    <img src="../../../src/assets/images/about/nat-3.jpg" alt="Nature Picture 3" class="about-images-composition__image about-images-composition__image--third">
+                    <img :srcset="`${require('../../../src/assets/images/about/nat-1_low-res.jpg')} 300w , ${require('../../../src/assets/images/about/nat-1.jpg')} 1000w`"
+                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50vw"
+                         alt="Nature Picture 1"
+                         class="about-images-composition__image about-images-composition__image--first"
+                    >
+                    <img :srcset="`${require('../../../src/assets/images/about/nat-2_low-res.jpg')} 300w , ${require('../../../src/assets/images/about/nat-2.jpg')} 1000w`"
+                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50vw"
+                         alt="Nature Picture 2"
+                         class="about-images-composition__image about-images-composition__image--second"
+                    >
+                    <img :srcset="`${require('../../../src/assets/images/about/nat-3_low-res.jpg')} 300w , ${require('../../../src/assets/images/about/nat-3.jpg')} 1000w`"
+                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50wh"
+                         alt="Nature Picture 3"
+                         class="about-images-composition__image about-images-composition__image--third"
+                    >
                 </div>
             </div>
         </div>
