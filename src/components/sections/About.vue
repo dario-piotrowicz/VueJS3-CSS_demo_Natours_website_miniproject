@@ -25,20 +25,12 @@
                     <text-link-button href="#" text="Learn more"></text-link-button>
                 </div>
                 <div class="col-1-of-2 about-images-composition">
-                    <img :srcset="`${require('../../../src/assets/images/about/nat-1_low-res.jpg')} 300w , ${require('../../../src/assets/images/about/nat-1.jpg')} 1000w`"
-                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50vw"
-                         alt="Nature Picture 1"
-                         class="about-images-composition__image about-images-composition__image--first"
-                    >
-                    <img :srcset="`${require('../../../src/assets/images/about/nat-2_low-res.jpg')} 300w , ${require('../../../src/assets/images/about/nat-2.jpg')} 1000w`"
-                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50vw"
-                         alt="Nature Picture 2"
-                         class="about-images-composition__image about-images-composition__image--second"
-                    >
-                    <img :srcset="`${require('../../../src/assets/images/about/nat-3_low-res.jpg')} 300w , ${require('../../../src/assets/images/about/nat-3.jpg')} 1000w`"
-                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50wh"
-                         alt="Nature Picture 3"
-                         class="about-images-composition__image about-images-composition__image--third"
+                    <img v-for="(imgData,index) in imagesData"
+                        :key="`composition-img-${index}`"
+                        :srcset="`${imgData.lowResImgSrc} 300w , ${imgData.imgSrc} 1000w`"
+                        sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50vw"
+                        :alt="imgData.alt"
+                        :class="`about-images-composition__image about-images-composition__image--${imgData.imgClassModifier}`"
                     >
                 </div>
             </div>
@@ -52,6 +44,30 @@ import TextLinkButton from '../TextLinkButton';
 export default {
     components: {
         "text-link-button": TextLinkButton
+    },
+    data: function(){
+        return {
+            imagesData: [
+                {
+                    imgSrc: require('../../../src/assets/images/about/nat-1.jpg'),
+                    lowResImgSrc: require('../../../src/assets/images/about/nat-1_low-res.jpg'),
+                    alt: "Nature Picture 1",
+                    imgClassModifier: "first"
+                },
+                {
+                    imgSrc: require('../../../src/assets/images/about/nat-2.jpg'),
+                    lowResImgSrc: require('../../../src/assets/images/about/nat-2_low-res.jpg'),
+                    alt: "Nature Picture 2",
+                    imgClassModifier: "second"
+                },
+                {
+                    imgSrc: require('../../../src/assets/images/about/nat-3.jpg'),
+                    lowResImgSrc: require('../../../src/assets/images/about/nat-3_low-res.jpg'),
+                    alt: "Nature Picture 3",
+                    imgClassModifier: "third"
+                }
+            ]
+        };
     }
 }
 </script>
