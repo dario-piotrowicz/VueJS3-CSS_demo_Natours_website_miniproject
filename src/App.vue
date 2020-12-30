@@ -13,6 +13,7 @@
 
 <script>
 import "./assets/fonts/fonts.css";
+import "./assets/linea-icons/styles.css";
 import Navigation from "./components/Navigation";
 import SectionIntro from "./components/sections/Intro";
 import SectionAbout from "./components/sections/About";
