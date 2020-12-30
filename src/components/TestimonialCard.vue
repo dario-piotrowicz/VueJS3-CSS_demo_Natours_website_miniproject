@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .testimonial-card {
     width: 75%;
@@ -103,6 +104,24 @@ export default {
         margin-bottom: 1rem;
         font-weight: 700;
         text-transform: uppercase;
+    }
+
+    @include natours-mq(tablet-portrait) {
+        width: 85%;
+        transform: skewX(0);
+
+        & > * {
+            transform: skewX(0);
+        }
+
+        &__figure {
+            transform: translate(-3rem) skewX(0);
+        }
+    }
+    @include natours-mq(phone) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
     }
 }
 </style>
