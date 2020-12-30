@@ -9,14 +9,12 @@ $tablet-landscape-breakpoint: 1200px;
 $big-desktop-breakpoint: 1800px;
 
 @mixin natours-mq($breakpoint-name) {
-  @debug "#{$breakpoint-name} ---";
   @if$breakpoint-name==phone {
     @media (max-width: $phone-breakpoint) {
       @content;
     }
   } @else if $breakpoint-name == tablet-portrait {
     @media (max-width: $tablet-portrait-breakpoint) {
-      @debug "here";
       @content;
     }
   } @else if $breakpoint-name == tablet-landscape {
