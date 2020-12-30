@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .book-now-popup {
     position: fixed;
@@ -135,5 +136,39 @@ export default {
         column-gap: 4rem;
     }
 
+    @include natours-mq(tablet-portrait) {
+        &__left-pane {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 0;
+            z-index: -1;
+            transform: translateY(-50%);
+            filter: opacity(0.1) brightness(250%) saturate(60%);
+        }
+
+        &__right-pane {
+            width: 100%;
+        }
+
+        &__image {
+            &:first-child {
+                display: none;
+            }
+            display: block;
+            width: 100%;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+            margin-bottom: 3.5rem;
+            column-count: 1;
+        }
+    }
+    @include natours-mq(phone) {
+        &__image {
+            display: none;
+        }
+    }
 }
 </style>
