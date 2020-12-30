@@ -101,6 +101,7 @@
     &__menu {
         height: 100vh;
         width: 0;
+        overflow: hidden;
         position: fixed;
         top: 0;
         left: 0;
