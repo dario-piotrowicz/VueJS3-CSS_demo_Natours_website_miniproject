@@ -26,13 +26,6 @@ export default {
     padding: 15rem;
     background-image: linear-gradient(to right bottom, $color-primary-lighter, $color-primary-darker);
 
-    @include natours-mq(tablet-landscape) {
-        padding: 13rem;
-    }
-    @include natours-mq(tablet-portrait) {
-        padding: 10rem;
-    }
-
     &__content {
         background-image: linear-gradient(
                 105deg,
@@ -50,6 +43,59 @@ export default {
     &__form-container {
         width: 50%;
         padding: 6rem;
+    }
+
+    @include natours-mq(tablet-landscape) {
+        padding: 13rem;
+
+        &__content {
+            background-image: linear-gradient(
+                    105deg,
+                    transparentize($color-white, 0.18) 0%,
+                    transparentize($color-white, 0.18) 59.8%,
+                    transparent 60%
+                ),
+                url("../../assets/images/booking-bg.jpg"
+            );
+        }
+
+        &__form-container {
+            width: 60%;
+            padding: 5rem;
+        }
+    }
+    @include natours-mq(tablet-portrait) {
+        padding: 10rem;
+        &__content {
+            background-image: linear-gradient(
+                    105deg,
+                    transparentize($color-white, 0.18) 0%,
+                    transparentize($color-white, 0.18) 74.8%,
+                    transparent 75%
+                ),
+                url("../../assets/images/booking-bg.jpg"
+            );
+        }
+
+        &__form-container {
+            width: 75%;
+            padding: 4rem;
+        }
+    }
+    @include natours-mq(phone) {
+        &__content {
+            background-image: linear-gradient(
+                    90deg,
+                    transparentize($color-white, 0.18) 0%,
+                    transparentize($color-white, 0.18) 100%
+                ),
+                url("../../assets/images/booking-bg.jpg"
+            );
+        }
+
+        &__form-container {
+            width: 100%;
+        }
     }
 }
 </style>

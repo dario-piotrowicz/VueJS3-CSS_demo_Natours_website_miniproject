@@ -54,6 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .form-text {
     &:not(:last-child){
@@ -72,6 +73,10 @@ export default {
         background-color: transparentize($color-white, 0.5);
         border-bottom: 3px solid transparent;
         transition: box-shadow .3s, border-bottom .3s;
+
+        @include natours-mq(phone) {
+            width: 100%;
+        }
 
         &:focus {
             outline: none;

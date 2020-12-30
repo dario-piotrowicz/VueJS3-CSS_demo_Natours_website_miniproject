@@ -27,6 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .booking-form {
     &__heading {
@@ -39,6 +40,15 @@ export default {
         display: flex;
         justify-content: space-evenly;
         margin-bottom: 5rem;
+        text-align: center;
+
+        @include natours-mq(tablet-portrait) {
+            flex-direction: column;
+            height: 6.5rem;
+            justify-content: space-between;
+            margin-left: 1.5rem;
+            text-align: left;
+        }
     }
 
     .arrow {
