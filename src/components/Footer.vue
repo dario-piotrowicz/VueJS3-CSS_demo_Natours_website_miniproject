@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="footer__logo-container">
-            <img src="../assets/images/logo.png" alt="Full Logo" class="footer__logo">
+            <img :srcset="`${require('../assets/images/logo_low-res.png')} 1x , ${require('../assets/images/logo.png')} 2x`" alt="Full Logo" class="footer__logo">
         </div>
         <div class="grid">
             <div class="row">
