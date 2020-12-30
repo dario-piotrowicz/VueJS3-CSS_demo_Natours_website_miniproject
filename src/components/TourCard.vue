@@ -110,6 +110,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
+@import 'src/assets/styles/utils/media-queries.scss';
 
 .tour-card {
     $green-scheme-color-light: $color-primary-lighter;
@@ -135,7 +136,7 @@ export default {
         transition: transform 1s ease;
         border-radius: 3px;
         overflow: hidden;
-        box-shadow: 0 15px 40px transparentize($color-black, .85);;
+        box-shadow: 0 15px 40px transparentize($color-black, .85);
 
         &--back {
             transform: rotateY(180deg);
@@ -264,6 +265,51 @@ export default {
     &__price-value {
         font-size: 6rem;
         font-weight: 100;
+    }
+
+    @include natours-mq(tablet-landscape) {
+        height: auto;
+        border-radius: 3px;
+        overflow: hidden;
+        background-color: $color-white;
+        box-shadow: 0 15px 40px transparentize($color-black, .85);
+
+        &__side {
+            box-shadow: none;
+            height: auto;
+            position: relative;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0% 15%, 100% 0%, 100% 100%, 0% 100%);
+            }
+        }
+
+        &:hover > &__side {
+            transform: rotateY(0);
+        }
+
+        &__call-to-action {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            padding: 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__details {
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+        }
+
+        &__price-value {
+            line-height: 1;
+            font-size: 5rem;
+        }
     }
 }
 </style>
