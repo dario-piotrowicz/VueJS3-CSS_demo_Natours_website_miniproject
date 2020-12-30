@@ -31,6 +31,7 @@
                         sizes="(max-width: 900px) 20vw , (max-width: 600px) 30vw, 50vw"
                         :alt="imgData.alt"
                         :class="`about-images-composition__image about-images-composition__image--${imgData.imgClassModifier}`"
+                        :src="imgData.imgSrc"
                     >
                 </div>
             </div>
