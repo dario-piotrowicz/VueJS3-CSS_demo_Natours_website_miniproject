@@ -112,7 +112,6 @@ export default {
 @import 'src/assets/styles/constants/colors.scss';
 
 .tour-card {
-
     $green-scheme-color-light: $color-primary-lighter;
     $green-scheme-color-dark: $color-primary-darker;
 
@@ -133,7 +132,7 @@ export default {
         width: 100%;
         backface-visibility: hidden;
         height: 52rem;
-        transition: all 1s ease;
+        transition: transform 1s ease;
         border-radius: 3px;
         overflow: hidden;
         box-shadow: 0 15px 40px transparentize($color-black, .85);;
