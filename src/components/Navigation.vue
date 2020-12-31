@@ -1,6 +1,6 @@
 <template>
     <div class="navigation">
-        <input type="checkbox" class="navigation__checkbox" id="navigation-hidden-checkbox">
+        <input type="checkbox" class="navigation__checkbox" id="navigation-hidden-checkbox" v-model="hiddenCheckboxIsChecked">
         <label for="navigation-hidden-checkbox" class="navigation__button">
             <span class="navigation__icon"></span>
         </label>
@@ -8,27 +8,27 @@
         <nav class="navigation__menu">
             <ul class="navigation__list">
                 <li class="navigation__list-item">
-                    <a href="#" class="navigation__link">
+                    <a href="#" class="navigation__link" @click="onLinkClicked()">
                         <span class="navigation__list-item-enumeration">01</span> About Natours
                     </a>
                 </li>
                 <li class="navigation__list-item">
-                    <a href="#" class="navigation__link">
+                    <a href="#" class="navigation__link" @click="onLinkClicked()">
                         <span class="navigation__list-item-enumeration">02</span> Your benefits
                     </a>
                 </li>
                 <li class="navigation__list-item">
-                    <a href="#" class="navigation__link">
+                    <a href="#" class="navigation__link" @click="onLinkClicked()">
                         <span class="navigation__list-item-enumeration">03</span> Popular tours
                     </a>
                 </li>
                 <li class="navigation__list-item">
-                    <a href="#" class="navigation__link">
+                    <a href="#" class="navigation__link" @click="onLinkClicked()">
                         <span class="navigation__list-item-enumeration">04</span> Stories
                     </a>
                 </li>
                 <li class="navigation__list-item">
-                    <a href="#" class="navigation__link">
+                    <a href="#" class="navigation__link" @click="onLinkClicked()">
                         <span class="navigation__list-item-enumeration">05</span> Book now
                     </a>
                 </li>
@@ -36,6 +36,21 @@
         </nav>
     </div>
 </template>
+
+<script>
+export default {
+    data: function(){
+        return {
+            hiddenCheckboxIsChecked: false
+        };
+    },
+    methods: {
+        onLinkClicked: function(){
+            this.hiddenCheckboxIsChecked = false;
+        }
+    }
+}
+</script>
 
 <style lang="scss" scoped>
 @import 'src/assets/styles/constants/colors.scss';
