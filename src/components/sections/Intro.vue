@@ -36,10 +36,15 @@ export default {
   height: 95vh;
   position: relative;
   background-image: linear-gradient(to bottom right, $bg-color-top-left, $bg-color-bottom-right),
-    url("../../assets/images/intro-bg.jpg");
+    url("../../assets/images/intro-bg_low-res.jpg");
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+    background-image: linear-gradient(to bottom right, $bg-color-top-left, $bg-color-bottom-right),
+      url("../../assets/images/intro-bg.jpg");
+  }
 
   @include natours-mq(tablet-portrait) {
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
