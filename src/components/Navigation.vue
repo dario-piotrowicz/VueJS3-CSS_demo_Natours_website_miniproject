@@ -7,29 +7,10 @@
         <div class="navigation__background"></div>
         <nav class="navigation__menu">
             <ul class="navigation__list">
-                <li class="navigation__list-item">
+                <li v-for="(linkName, index) in ['About Natours', 'Your benefits', 'Popular tours', 'Stories', 'Book now']" :key="`navigation-link-${index}`"
+                    class="navigation__list-item">
                     <a href="#" class="navigation__link" @click="onLinkClicked()">
-                        <span class="navigation__list-item-enumeration">01</span> About Natours
-                    </a>
-                </li>
-                <li class="navigation__list-item">
-                    <a href="#" class="navigation__link" @click="onLinkClicked()">
-                        <span class="navigation__list-item-enumeration">02</span> Your benefits
-                    </a>
-                </li>
-                <li class="navigation__list-item">
-                    <a href="#" class="navigation__link" @click="onLinkClicked()">
-                        <span class="navigation__list-item-enumeration">03</span> Popular tours
-                    </a>
-                </li>
-                <li class="navigation__list-item">
-                    <a href="#" class="navigation__link" @click="onLinkClicked()">
-                        <span class="navigation__list-item-enumeration">04</span> Stories
-                    </a>
-                </li>
-                <li class="navigation__list-item">
-                    <a href="#" class="navigation__link" @click="onLinkClicked()">
-                        <span class="navigation__list-item-enumeration">05</span> Book now
+                        <span class="navigation__list-item-enumeration">0{{index+1}}</span>{{ linkName }}
                     </a>
                 </li>
             </ul>
