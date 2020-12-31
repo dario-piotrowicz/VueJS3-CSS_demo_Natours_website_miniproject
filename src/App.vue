@@ -85,4 +85,8 @@ html {
   }
 }
 
+::selection {
+  background-color: transparentize($color-primary-lighter, 0.65);
+  color: darken($color-primary-darker, 10);
+}
 </style>
