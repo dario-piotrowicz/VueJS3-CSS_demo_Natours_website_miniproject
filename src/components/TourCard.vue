@@ -267,7 +267,8 @@ export default {
         font-weight: 100;
     }
 
-    @include natours-mq(tablet-landscape) {
+    @media only screen and (max-width: $tablet-landscape-breakpoint),
+           only screen and (hover: none) {
         height: auto;
         border-radius: 3px;
         overflow: hidden;
