@@ -10,19 +10,19 @@ $big-desktop-breakpoint: 1800px;
 
 @mixin natours-mq($breakpoint-name) {
   @if$breakpoint-name==phone {
-    @media (max-width: $phone-breakpoint) {
+    @media only screen and (max-width: $phone-breakpoint) {
       @content;
     }
   } @else if $breakpoint-name == tablet-portrait {
-    @media (max-width: $tablet-portrait-breakpoint) {
+    @media only screen and (max-width: $tablet-portrait-breakpoint) {
       @content;
     }
   } @else if $breakpoint-name == tablet-landscape {
-    @media (max-width: $tablet-landscape-breakpoint) {
+    @media only screen and (max-width: $tablet-landscape-breakpoint) {
       @content;
     }
   } @else if $breakpoint-name == big-desktop {
-    @media (min-width: $big-desktop-breakpoint) {
+    @media only screen and (min-width: $big-desktop-breakpoint) {
       @content;
     }
   } @else {

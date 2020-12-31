@@ -41,7 +41,7 @@ export default {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 
-  @media (min-resolution: 192dpi) and (min-width: 600px), (min-width: 2000px) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 600px), only screen and (min-width: 2000px) {
     background-image: linear-gradient(to bottom right, $bg-color-top-left, $bg-color-bottom-right),
       url("../../assets/images/intro-bg.jpg");
   }
