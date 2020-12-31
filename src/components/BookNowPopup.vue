@@ -61,7 +61,12 @@ export default {
     &--visible {
         opacity: 1;
         visibility: visible;
-        backdrop-filter: blur(10px);
+        background-color: transparentize($color-black, .4);
+
+        @supports(backdrop-filter: blur(10px)){
+            backdrop-filter: blur(10px);
+            background-color: transparentize($color-black, .7);
+        }
     }
 
     &__content-wrapper {
