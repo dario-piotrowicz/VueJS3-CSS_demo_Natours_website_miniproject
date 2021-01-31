@@ -3,7 +3,7 @@
 This is a simple miniproject I'm doing following a course on CSS and SASS ( [Advanced CSS and Sass: Flexbox, Grid, Animations and More! by Jonas Schmedtmann](https://www.udemy.com/course/advanced-css-and-sass/) ).
 \
 \
-The webiste is that of a fictitional company named Natours which as the name suggest sells nature tours.
+The website is that of a fictitional company named Natours which as the name suggest sells nature tours.
 \
 \
 To make this miniproject a bit more intresting and enjoyable for me to work on I decide to implement it using VueJs (which I'm studing) instead of simply static HTML/CSS/SASS.
