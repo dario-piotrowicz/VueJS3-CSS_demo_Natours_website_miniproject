@@ -1,32 +1,35 @@
 <template>
-  <button v-if="isButton" :class="`btn btn--${colorScheme}`" @click="$emit('click')"><slot></slot></button>
-  <a v-else href="href" :class="`btn btn--${colorScheme}`"><slot></slot></a>
+  <button
+    v-if="isButton"
+    :class="`btn btn--${colorScheme}`"
+    @click="$emit('click')"
+  >
+    <slot></slot>
+  </button>
+  <a v-else :href="href" :class="`btn btn--${colorScheme}`"><slot></slot></a>
 </template>
 
 <script>
-const possibleColorSchemes = [
-    'green',
-    'white'
-];
+const possibleColorSchemes = ["green", "white"];
 
 export default {
   props: {
     href: String,
-    'color-scheme': {
-        type: String,
-        default: 'white',
-        validator: value => possibleColorSchemes.includes(value)
+    "color-scheme": {
+      type: String,
+      default: "white",
+      validator: (value) => possibleColorSchemes.includes(value),
     },
-    isButton:{
+    isButton: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
 };
 </script>
 
-<style lang='scss' scoped>
-@import 'src/assets/styles/constants/colors.scss';
+<style lang="scss" scoped>
+@import "src/assets/styles/constants/colors.scss";
 
 .btn {
   font-size: 1.6rem;
@@ -35,7 +38,7 @@ export default {
   padding: 1.5rem 4rem;
   display: inline-block;
   border-radius: 10rem;
-  transition: transform .1s, box-shadow .1s;
+  transition: transform 0.1s, box-shadow 0.1s;
   position: relative;
   transform: translateY(0);
   cursor: pointer;
@@ -43,8 +46,8 @@ export default {
   outline: none;
 
   &:hover {
-    transform: translateY(-.5rem);
-    box-shadow: 0 1rem 2rem transparentize($color-black, .77);
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem transparentize($color-black, 0.77);
 
     &::after {
       transform: scaleX(1.4) scaleY(1.7);
@@ -52,9 +55,10 @@ export default {
     }
   }
 
-  &:active, &:focus {
-    transform: translateY(-.1rem);
-    box-shadow: 0 .5rem 1rem transparentize($color-black, .77);
+  &:active,
+  &:focus {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem transparentize($color-black, 0.77);
   }
 
   &::after {
@@ -67,7 +71,7 @@ export default {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: transform .4s, opacity .4s;
+    transition: transform 0.4s, opacity 0.4s;
   }
 
   &--white {
@@ -87,6 +91,5 @@ export default {
       background-color: $color-primary;
     }
   }
-
 }
 </style>
